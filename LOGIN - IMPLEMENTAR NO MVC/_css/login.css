@@ -1,5 +1,5 @@
 		*{margin:0px;padding:0px;font-family:Arial;}
-		body{background-image:url('../_images/fundo.jpg');background-repeat: no-repeat;background-size: ;background-position: center;background-attachment:fixed;}
+		body{background-image:url('../_images/background.jpg');background-repeat: no-repeat;background-position: center;background-attachment:fixed;}
 		.container{margin:auto;max-width:400px;width: 100%;display:block;}
 		.form{background-color: rgba(55, 10, 5, 0.1);
     border-radius: 49px 49px 0px 0px;  box-shadow: -10px 10px 27px #00000094;}
