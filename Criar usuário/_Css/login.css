@@ -1,0 +1,82 @@
+		*{margin:0px;padding:0px;font-family:Arial;}
+		body{
+			background-image:url('../_imagens/background.jpg');
+			background-repeat: no-repeat; 
+			background-position: center;
+			background-attachment:fixed;
+		}
+
+		.container{
+			margin:auto;
+			max-width:400px;
+			width: 100%;
+			display:block;
+		}
+
+		.form{
+			background-color: rgba(55, 10, 5, 0.7);
+			border-radius: 49px 49px 0px 0px;  
+			box-shadow: -10px 10px 27px #00000094;
+		}
+
+		.form form{
+			background-color:rgba(55, 10, 5, 0.1);
+			padding-left: 25px;
+			padding-right: 25px;
+			padding-top: 24px;
+			padding-bottom: 24px; 
+		}
+
+		.form input{
+			margin:auto;
+			display:block;
+			width: 95%;
+			height: 54px;
+			padding-left: 13px;
+			outline-color:#555;
+			border:1px solid #bbb;
+			background-color: rgba(212,187,191,0.76);
+			outline: 0;border: none;
+			font-weight: bold;
+			background-repeat: no-repeat;
+			background-image: none;
+			background-position: 94% 17px;
+		}
+
+		.form h1{
+			text-align:center;
+			line-height:80px;
+			color:#fff;
+			font-weight: normal;
+		}
+
+		.form form button{
+			width: 100%;
+			text-align: center;
+			margin-top: 25px;
+			height:54px;
+			background-color: rgba(76,21,1,0.76);
+			border:none;
+			color: #fff;
+			cursor:pointer;
+			outline:0;
+		}
+
+		.form form button:hover{
+			background-color:#892c03;
+		}
+
+		.seta{
+			width: 0px;
+			margin-right: auto;
+			margin-left: auto;
+			border: 12px solid transparent;
+			border-bottom-color: rgb(76, 21, 1);
+		}
+
+		.form form span{
+			display:block;
+			color:red;
+			margin-top:5px;
+			margin-top:20px;
+		}
