@@ -6,6 +6,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="_Css/login.css">
 	
+	
 </head>
 <body>
 	<div class="container">
@@ -16,12 +17,35 @@
 			<form action="" method="GET">	
                 <input type="Nome" name="Nome" placeholder="Nome" maxlength="15" />
                 <input type="Sobrenome" name="Sobrenome" placeholder="Sobrenome" required style="margin-top: 25px;"maxlength="15" />
-                <input type="Email" name="Email" placeholder="Email" required style="margin-top: 25px;" maxlength="50"/>
-                <button type="submit">Cadastrar</button>
+                <input type="Email" name="Email" placeholder="Email" onblur="validacaoEmail(f1.email)" required style="margin-top: 25px;" maxlength="50"/>
+                <button type="submit">Cadastrar </button>
 				<img src="_imagens/logo.png" style="display:block;margin:auto;margin-top:10px;">
 			</form>
 			
 		</div>
+		<script language="Javascript">
+			function validacaoEmail(field) {
+			usuario = field.value.substring(0, field.value.indexOf("@"));
+			dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+			
+			if ((usuario.length >=1) &&
+				(dominio.length >=3) && 
+				(usuario.search("@")==-1) && 
+				(dominio.search("@")==-1) &&
+				(usuario.search(" ")==-1) && 
+				(dominio.search(" ")==-1) &&
+				(dominio.search(".")!=-1) &&      
+				(dominio.indexOf(".") >=1)&&
+				(dominio.lastIndexOf(".") < dominio.length - 1)) {
+			document.getElementById("msgemail").innerHTML="E-mail válido";
+			alert("E-mail valido");
+			}
+			else{
+			document.getElementById("msgemail").innerHTML="<font color='red'>E-mail inválido </font>";
+			alert("E-mail invalido");
+			}
+			}
+		</script>
 	</div>
 </body>	
 </html>
