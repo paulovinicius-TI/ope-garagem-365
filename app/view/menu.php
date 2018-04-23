@@ -15,8 +15,7 @@
         <img class="logo-menu" src="../assets/images/logo.png">
         <a href="cadastro_usuario.php" class="btnMenu"><i class="fas fa-user-plus menu-icons"></i>Usuários</a>
         <a href="cadastro_cliente.php" class="btnMenu"><i class="fas fa-address-card menu-icons"></i>Clientes</a>
-        <a href="abrir_comanda.php" class="btnMenu"><i class="fas fa-notes-medical menu-icons"></i></i>Abrir Comanda</a>
-        <a href="#" class="btnMenu"><i class="fas fa-clipboard-check menu-icons"></i>Fechar comanda</a>
+        <a href="pedidos.php" class="btnMenu"><i class="fas fa-notes-medical menu-icons"></i></i>Pedidos</a>
         <a href="estoque.php" class="btnMenu"><i class="fas fa-box-open menu-icons"></i>Estoque</a>
         <a href="" class="btnMenu"><i class="fas fa-dollar-sign menu-icons"></i>Controle de Lucro</a>
         <a href="#" class="btnMenu"><i class="fas fa-sign-out-alt menu-icons"></i>Sair</a>
