@@ -84,6 +84,7 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
     width:700px;
     background:#222222;
     position:relative;
+    top:185px;
     border:1px solid #262626;
     box-shadow: 0px 0px 100px #000000;
     border-radius: 15px 15px 15px 15px;
@@ -121,36 +122,18 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
     background:#1C1C1C;
     border-top:1px solid #262626;
     border-bottom:1px solid #161712;
-    padding:5px 0;
-}
-.box .label-button {
-    width:98% !important;
-    text-align: right;
-    padding-right: 9px;
-}
-.box .label-adc-produto {
-    width:98% !important;
-    text-align: left;
-    padding-right: 9px;
-
-}
-.box .label-valor-total span {
-    text-align: center;
-    float: right;
-    margin-right: 10px;
-}
-.box .label-valor-total{
-    width:98% !important;
+    padding:10px 0 10px 0;
 }
 
 .box label span {
     display: block;
     color:#bbbbbb;
-    font-size:13px;
-    text-align:left;
+    font-size:15px;
+    float:left;
+    width:105px;
+    text-align:right;
+    padding:5px 20px 0 0;
     opacity:0.50;
-    position: relative;
-    margin-left: 5px;
 }
 
 .box .input_text {
@@ -231,88 +214,122 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
     border:0px;
     position: relative;
     top:-2px;
-    /*:left:565px;*/
+    left:565px;
     width:95px;
-    border: 1px double #286090;
+    border-bottom: 1px double #286090;
+    border-top: 1px double #286090;
+    border-left:1px double #286090;
+    border-right:1px double #286090;
 }
-.box .button-cancelar{
-    margin:0 0 -5px 0;
-    padding:4px 7px;
-    background:green;
-    border:0px;
-    position: relative;
-    top:-2px;
-    /*:left:565px;*/
-    width:95px;
-    border: 1px double green;
-    float: right;
-}
-.box .button-remover-do-pedido{
-    width: 22px;
-    height: 22px;
-    border-radius: 30px;
-    background-color: red;
-    border: red;
-    top: 0;
-    margin-left: 5px;
-}
-.box .qtd-produto{
-    width: 8% !important;
-    float: left;
-}
+
 
 /*Controle de lucro*/
 
-/*abrir pedido*/
-.box-pedido{
-    width: 324px;
+/*abrir comanda*/
+.box-abrir-comanda{
+    width: 290px;
     background: #222222;
     color: #bbbbbb;
-    top: 0;
-    float: left;
-    margin-left: 400px;
-}
-.box-pedido label{
-    width: 55% !important;
-    float: left;
+    margin-right: 50px;
 }
 
 .box input{
     background: #262626;
     color: #bbbbbb;
 }
-.box .adicionar-ao-pedido {
+.box .cerveja {
     padding:8px 10px;
-    width: 57.5%;
-    height: 25px;
+    width:75px;
     background:#262626;
     border-bottom: 1px double #171717;
     border-top: 1px double #171717;
     border-left:1px double #333333;
     border-right:1px double #333333;
 }
-.box .adicionar-ao-pedido-qtd{
-    margin-left: 4px;
-    width: 8%;
-    height: 25px;
+.box .refrigerante {
+    padding:8px 10px;
+    width:75px;
     background:#262626;
     border-bottom: 1px double #171717;
     border-top: 1px double #171717;
     border-left:1px double #333333;
     border-right:1px double #333333;
+}
 
+.box .agua {
+    padding:8px 10px;
+    width:75px;
+    background:#262626;
+    border-bottom: 1px double #171717;
+    border-top: 1px double #171717;
+    border-left:1px double #333333;
+    border-right:1px double #333333;
 }
+
 .btn-adicionar{
     left: 0 !important;
 }
 .label-btn{
     text-align: center;
 }
-.box .valor-produto{
-    width: 23% !important;
-    float: left;
+
+.box .churrasquinho {
+    padding:8px 10px;
+    width:75px;
+    background:#262626;
+    border-bottom: 1px double #171717;
+    border-top: 1px double #171717;
+    border-left:1px double #333333;
+    border-right:1px double #333333;
 }
-/*ESTOQUE*/
+.box .salgados {
+    padding:8px 10px;
+    width:75px;
+    background:#262626;
+    border-bottom: 1px double #171717;
+    border-top: 1px double #171717;
+    border-left:1px double #333333;
+    border-right:1px double #333333;
+}
+
+.box .outro {
+    padding:8px 10px;
+    width:75px;
+    background:#262626;
+    border-bottom: 1px double #171717;
+    border-top: 1px double #171717;
+    border-left:1px double #333333;
+    border-right:1px double #333333;
+}
+
+.box .combo1 {
+    padding:8px 10px;
+    width:75px;
+    background:#262626;
+    border-bottom: 1px double #171717;
+    border-top: 1px double #171717;
+    border-left:1px double #333333;
+    border-right:1px double #333333;
+}
+.box .combo2 {
+    padding:8px 10px;
+    width:75px;
+    background:#262626;
+    border-bottom: 1px double #171717;
+    border-top: 1px double #171717;
+    border-left:1px double #333333;
+    border-right:1px double #333333;
+}
+
+.box .combo3 {
+    padding:8px 10px;
+    width:75px;
+    background:#262626;
+    border-bottom: 1px double #171717;
+    border-top: 1px double #171717;
+    border-left:1px double #333333;
+    border-right:1px double #333333;
+}
 
 .TabelaEstoque {
   font-family: arial, sans-serif;
@@ -373,12 +390,9 @@ border: 1px solid #222222;
     font-weight: 600;
 }
 
-.valor-total{
-    float: left;
-}
-.btn-novo-pedido{
-    background-color: #337ab7;
-    border: #337ab7;
-    margin: 20px;
-    padding: 10px;
+.TesteComanda{
+    position: absolute;
+    text-align: right;
+    display: inline-flex;
+    right: 0;
 }

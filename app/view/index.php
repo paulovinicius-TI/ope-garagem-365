@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="../assets/css/font-awesome/css/fontawesome-all.min.css">
   </head>
   <body id="top" data-spy="scroll">
-    <form name="meuForm" method="post" id="formulario" onsubmit="return redirectMe()">
+    <form name="meuForm" method="post" id="formulario" action="AutenticacaoDeUsuario.php">
       <div class="box login-box"> 
         <img class="logo-login" src="../assets/images/logo.png">
         <h1><center></i>Login</center></h1>
         <label>
           <span>Email</span>
-          <input type="text" required class="input_text" name="NomeUsuario" id="UserName" placeholder="ExemploUser" />
+          <input type="email" required class="input_text" name="EmailUsuario" id="UserName" placeholder="exemplo@exemplo.com" />
         </label>
         <label>
           <span>Senha</span>
@@ -33,12 +33,5 @@
         </label>           
       </div>
     </form>
-    <script>
-    
-      function redirectMe() {
-        window.location.replace("cadastro_usuario.php");
-        return false;
-      }
-  </script>
   </body>
 </html>
