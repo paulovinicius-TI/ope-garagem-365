@@ -18,7 +18,7 @@
         <a href="pedidos.php" class="btnMenu"><i class="fas fa-notes-medical menu-icons"></i></i>Pedidos</a>
         <a href="estoque.php" class="btnMenu"><i class="fas fa-box-open menu-icons"></i>Estoque</a>
         <a href="" class="btnMenu"><i class="fas fa-dollar-sign menu-icons"></i>Controle de Lucro</a>
-        <a href="#" class="btnMenu"><i class="fas fa-sign-out-alt menu-icons"></i>Sair</a>
+        <a href="logout.php" class="btnMenu"><i class="fas fa-sign-out-alt menu-icons"></i>Sair</a>
       </div>
     </header>
 
