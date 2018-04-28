@@ -48,11 +48,11 @@
 
     <label>
       <span>Email</span>
-      <input type="email" class="input_text" name="email" id="email" placeholder="exemplo@email.com" />
+      <input type="email" class="input-text" name="email" id="email" placeholder="exemplo@email.com" />
     </label>
     <label>
       <span>Senha</span>
-      <input type="password" class="input_text" name="senha" id="senha" placeholder="senha" />
+      <input type="password" class="input-text" name="senha" id="senha" placeholder="senha" />
     </label>
     <label>
       <input type="submit" class="button" value="Cadastrar" />

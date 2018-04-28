@@ -17,16 +17,16 @@
   </head>
   <body id="top" data-spy="scroll">
     <form name="meuForm" method="post" id="formulario" action="AutenticacaoDeUsuario.php">
-      <div class="box login-box"> 
+      <div class="box box-login"> 
         <img class="logo-login" src="../assets/images/logo.png">
         <h1><center></i>Login</center></h1>
         <label>
           <span>Email</span>
-          <input type="email" required class="input_text" name="EmailUsuario" id="UserName" placeholder="exemplo@exemplo.com" />
+          <input type="email" required class="input-text" name="EmailUsuario" id="UserName" placeholder="exemplo@exemplo.com" />
         </label>
         <label>
           <span>Senha</span>
-          <input type="password" required class="input_text" name="SenhaUsuario" id="UserPass" placeholder="Senha" />
+          <input type="password" required class="input-text" name="SenhaUsuario" id="UserPass" placeholder="Senha" />
         </label>
         <label class="btn-login">
           <input type="submit" class="button" value="Login" />

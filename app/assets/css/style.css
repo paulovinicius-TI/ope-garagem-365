@@ -89,11 +89,11 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
     border-radius: 15px 15px 15px 15px;
 }
 
-.login-box{
+.box-login{
     text-align: center;
     width:550px !important;
 }
-.login-box .button{
+.box-login .button{
     left:0px !important;
     margin-right: 15px !important;
 }
@@ -153,74 +153,37 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
     margin-left: 5px;
 }
 
-.box .input_text {
-    padding:8px 10px;
-    width:350px;
+.box .input-text {
+    margin: 3px 5px;
+    padding:8px 10px !important;
     background:#262626;
     border-bottom: 1px double #171717;
     border-top: 1px double #171717;
     border-left:1px double #333333;
     border-right:1px double #333333;
-
 }
-
-.box .nome {
-    padding:8px 10px;
+#nome-cliente{
     width:240px;
-    background:#262626;
-    border-bottom: 1px double #171717;
-    border-top: 1px double #171717;
-    border-left:1px double #333333;
-    border-right:1px double #333333;
 }
 
-.box .snome {
-    padding:8px 10px;
-    width:240px;
-    background:#262626;
-    border-bottom: 1px double #171717;
-    border-top: 1px double #171717;
-    border-left:1px double #333333;
-    border-right:1px double #333333;
+#snome-cliente{
+    width: 240px;
+}
+#cpf-cliente{
+    width: 132px;
 }
 
-.box .rua {
-    padding:8px 10px;
-    width:300px;
-    background:#262626;
-    border-bottom: 1px double #171717;
-    border-top: 1px double #171717;
-    border-left:1px double #333333;
-    border-right:1px double #333333;
+#cep-cliente{
+    width: 115px;
 }
-
-.box .bairro {
-    padding:8px 10px;
-    width:200px;
-    background:#262626;
-    border-bottom: 1px double #171717;
-    border-top: 1px double #171717;
-    border-left:1px double #333333;
-    border-right:1px double #333333;
+#numero-end-cliente{
+    width: 80px;
 }
-
-.box .cpf {
-    padding:8px 10px;
-    width:200px;
-    background:#262626;
-    border-bottom: 1px double #171717;
-    border-top: 1px double #171717;
-    border-left:1px double #333333;
-    border-right:1px double #333333;
+#button-cadastrar-cliente{
+    margin-top: 3px;
 }
-.box .cpf {
-    padding:8px 10px;
-    width:200px;
-    background:#262626;
-    border-bottom: 1px double #171717;
-    border-top: 1px double #171717;
-    border-left:1px double #333333;
-    border-right:1px double #333333;
+.button-cadastrar-cliente{
+    text-align: right;
 }
 
 
