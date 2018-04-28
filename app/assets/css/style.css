@@ -77,11 +77,11 @@ a {
 }
 
 /*table-layout: */
-form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
+form,input,select,textarea{margin:0; padding:100px; color:#ffffff;}
 
 .box {
     margin:0 auto;
-    width:700px;
+    width:600px;
     background:#222222;
     position:relative;
     border:1px solid #262626;
@@ -117,7 +117,7 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
 .box label {
     width:98%;
     margin-left: 6px;
-    display: block;
+    display: inline-block;
     background:#1C1C1C;
     border-top:1px solid #262626;
     border-bottom:1px solid #161712;
@@ -143,15 +143,7 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
     width:98% !important;
 }
 
-.box label span {
-    display: block;
-    color:#bbbbbb;
-    font-size:13px;
-    text-align:left;
-    opacity:0.50;
-    position: relative;
-    margin-left: 5px;
-}
+
 
 .box .input_text {
     padding:8px 10px;
@@ -225,12 +217,9 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
 
 
 .box .button{
-    margin:0 0 -5px 0;
+    margin:0;
     padding:4px 7px;
     background:#337ab7;
-    border:0px;
-    position: relative;
-    top:-2px;
     /*:left:565px;*/
     width:95px;
     border: 1px double #286090;
@@ -254,7 +243,7 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
     background-color: red;
     border: red;
     top: 0;
-    margin-left: 5px;
+    margin: 0px 0px 13px 5px;
 }
 .box .qtd-produto{
     width: 8% !important;

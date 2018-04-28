@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../assets/css/font-awesome/css/fontawesome-all.min.css">
   </head>
   <body id="top" data-spy="scroll">
-    <form name="meuForm" method="post" id="formulario" action="AutenticacaoDeUsuario.php">
+    <form name="meuForm" method="post" id="formulario" action="../controller/AutenticacaoDeUsuario.php">
       <div class="box login-box"> 
         <img class="logo-login" src="../assets/images/logo.png">
         <h1><center></i>Login</center></h1>
