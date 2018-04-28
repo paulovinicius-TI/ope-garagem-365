@@ -12,11 +12,11 @@
 <head>
 <script type="text/javascript">
 function loginsuccessfully(){
-	setTimeout("window.location='cadastro_usuario.php'", 1000);
+	setTimeout("window.location='../view/cadastro_usuario.php'", 1000);
 }
 
 function loginfailed(){
-	setTimeout("window.location='index.php'", 1000);
+	setTimeout("window.location='../view/index.php'", 1000);
 }
 </script>
 </head>
@@ -29,9 +29,9 @@ $senha = $_POST['SenhaUsuario'];
 $sql = mysqli_query($conexão,"SELECT * FROM funcionario WHERE email = '$email' and senha = '$senha'") or die(mysqli_error());
 $row = mysqli_num_rows($sql);
 if ($row > 0) {
-	session_start();
 	$_SESSION['EmailUsuario'] = $_POST['EmailUsuario'];
 	$_SESSION['SenhaUsuario'] = $_POST['SenhaUsuario'];
+	session_start();
 	echo "<center>Você foi autenticado com sucesso! Aguarde um instante.</center>";
 	echo "<script>loginsuccessfully()</script>";
 }

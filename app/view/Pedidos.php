@@ -11,9 +11,7 @@
   </head>
   <body id="top" data-spy="scroll">
     <div class="AddProd"> 
-      <input type="submit" class="button btn-novo-pedido" value="Novo Pedido" 
-      onclick="adicionar()" />
-    </div>
+      <input type="submit" class="button btn-novo-pedido" value="Novo Pedido" onclick="adicionar()" /></div>
     
     <form name="meuForm" method="post" class="form-pedido" id="form-pedido">
       <div class="box box-pedido"> 
@@ -62,20 +60,6 @@
       </div>
     </form>
 
-    <form name="meuForm" method="post" class="form-pedido" id="form-pedido1">
-      <div class="box box-pedido"> 
-    	  <h1><center><i class="fas fa-address-card menu-icons"></i>Pedido Nº </center></h1>
-        <label class="label label-adc-produto">
-          <input type="text" class="adicionar-ao-pedido-qtd" placeholder="Qtd." />
-          <input type="text" class="adicionar-ao-pedido" placeholder="adicionar ao pedido" />
-		      <input type="button" class="button" value="adicionar" />
-        </label> 
-        <label class="label label-button">
-        	<span class="valor-total">Valor total: R$ 0,00</span>
-		      <input type="button" class="button button-cancelar" value="Fechar Pedido" />
-        </label>       
-      </div>
-    </form>
 
 <script>
 var regex = /^(.+?)(\d+)$/i;

@@ -4,20 +4,22 @@
     <?php 
       include "menu.php";
 
-      // $host = 'localhost';
-      // $user = 'root';
-      // $pass = '';
-      // $banco = 'cadastro';
-      // $conexão = mysqli_connect($host, $user, $pass) or die(mysqli_error());
-      // mysqli_select_db($conexão, $banco) or die(mysqli_error());
 
-      // $cpf = isset($_POST['cpf']) ? $_POST['cpf'] : false;
-      // $nome = isset($_POST['nome']) ? $_POST['nome'] : false;
-      // $sobrenome = isset($_POST['snome']) ? $_POST['snome'] : false;
-      // $senha = isset($_POST['senha']) ? $_POST['senha'] : false;
-      // $email = isset($_POST['email']) ? $_POST['email'] : false;
-      // $sql = mysqli_query($conexão, "INSERT INTO funcionario(cpf, nome, sobrenome, senha, email) 
-      // VALUES('$cpf', '$nome', '$sobrenome', '$senha', '$email')");
+      $host = 'localhost';
+      $user = 'root';
+      $pass = '';
+      $banco = 'cadastro';
+      $conexão = mysqli_connect($host, $user, $pass) or die(mysqli_error());
+      mysqli_select_db($conexão, $banco) or die(mysqli_error());
+
+      $cpf = isset($_POST['cpf']) ? $_POST['cpf'] : false;
+      $nome = isset($_POST['nome']) ? $_POST['nome'] : false;
+      $sobrenome = isset($_POST['snome']) ? $_POST['snome'] : false;
+      $senha = isset($_POST['senha']) ? $_POST['senha'] : false;
+      $email = isset($_POST['email']) ? $_POST['email'] : false;
+      $sql = mysqli_query($conexão, "INSERT INTO funcionario(cpf, nome, sobrenome, senha, email) 
+      VALUES('$cpf', '$nome', '$sobrenome', '$senha', '$email')");
+
     ?>
 
   	<meta charset="UTF-8">
@@ -29,8 +31,10 @@
 
   </head>
   <body id="top" data-spy="scroll">
-    <form name="meuForm" method="POST" id="formulario" action="cadastro_usuario.php">
+
+    <form name="meuForm" method="POST" id="formulario" action="../controller/CriacaoDeUsuario.php">
     <div class="box box-cadastro-usuario"> 
+
       <h1><center><i class="fas fa-address-card menu-icons"></i>Cadastro de usuário</center></h1>
  
     <label> 
