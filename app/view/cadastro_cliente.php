@@ -14,39 +14,42 @@
 
   </head>
   <body id="top" data-spy="scroll">
+    
     <form name="meuForm" method="post" id="formulario">
-    <div class="box"> 
+    <div class="box cadastro-cliente-box"> 
       <h1><center><i class="fas fa-address-card menu-icons"></i>Cadastro de cliente</center></h1>
  
     <label> 
       <span>Nome</span>
-      <input type="text" class="nome" name="nome" id="nme" placeholder="Nome" />
-      <input type="text" class="snome" name="nome" id="name" placeholder="Sobrenome" />
+      <input type="text" class="input-text" id="nome-cliente" placeholder="Nome" />
+      <input type="text" class="input-text" id="snome-cliente" placeholder="Sobrenome" />
+      <input type="text" class="input-text" id="cpf-cliente" placeholder="CPF" />
  
     </label>
  
     <label>
       <span>Endereço</span>
-      <input type="text" class="rua" name="endereco" id="endereco" placeholder="Rua" />
-      <input type="text" class="bairro" name="endereco" id="endereco" placeholder="Bairro" />
+      <input type="text" class="input-text" id="cep-cliente" placeholder="CEP" />
+      <input type="text" class="input-text" id="logradouro-cliente" placeholder="logradouro" />
+      <input type="text" class="input-text" id="numero-end-cliente" placeholder="Nº" />
+      <input type="text" class="input-text" id="bairro-cliente" placeholder="Bairro" />
      </label>
  
 
     <label>
-      <span>Telefone</span>
-      <input type="text" class="input_text" name="tel" id="tel" placeholder="(00) 00000-0000" />
+      <span>Contato</span>
+      <input type="text" class="input-text" name="tel" id="tel" placeholder="Telefone" />
+      <input type="email" class="input-text" name="email" id="email" placeholder="email" />
     </label>
 
-    <label>
-      <span>Email</span>
-      <input type="email" class="input_text" name="email" id="email" placeholder="exemplo@email.com" />
-    </label>
+
+
  
-    <label>
-       
-      <input type="button" class="button" value="Cadastrar" />
+    <label class="button-cadastrar-cliente">
+      <input type="button" class="button" id="button-cadastrar-cliente" value="Cadastrar" />
     </label>           
   </div>
+
 </form>
 
 
