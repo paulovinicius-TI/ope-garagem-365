@@ -20,7 +20,8 @@
       <div class="welcome-username">        
       <?php
         $conexao = mysqli_connect("localhost", "root", "", "cadastro");
-        $dados = mysqli_query($conexao, "SELECT * FROM funcionario");
+        $email = $_SESSION['EmailUsuario'];
+        $dados = mysqli_query($conexao, "SELECT * FROM funcionario WHERE email = '$email'");
         $funcionario = mysqli_fetch_array($dados);
         echo 'Seja bem-vindo: '.$funcionario['nome'];
       ?>
