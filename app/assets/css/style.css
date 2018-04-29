@@ -80,6 +80,7 @@ a {
 form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 
 .box {
+    top: 30px;
     margin:0 auto;
     width:600px;
     background:#222222;
