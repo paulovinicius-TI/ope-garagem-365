@@ -13,5 +13,6 @@
   $email = isset($_POST['email']) ? $_POST['email'] : false;
   $sql = mysqli_query($conexão, "INSERT INTO funcionario(cpf, nome, sobrenome, senha, email) 
   VALUES('$cpf', '$nome', '$sobrenome', '$senha', '$email')");
+
   header("Location: ../view/cadastro_usuario.php");
 ?>

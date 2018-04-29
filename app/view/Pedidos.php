@@ -2,6 +2,11 @@
 <html lang="pt-br">
   <head>
     <?php 
+      session_start();
+      if (!isset($_SESSION['EmailUsuario']) AND !isset($_SESSION['SenhaUsuario'])) {
+        header("Location: index.php");
+        exit;        
+      }
       include "menu.php";
     ?>
   	<meta charset="UTF-8">
@@ -11,7 +16,8 @@
   </head>
   <body id="top" data-spy="scroll">
     <div class="AddProd"> 
-      <input type="submit" class="button btn-novo-pedido" value="Novo Pedido" onclick="adicionar()" /></div>
+      <input type="submit" class="button btn-novo-pedido" value="Novo Pedido" onclick="adicionar()" />
+    </div>
     
     <form name="meuForm" method="post" class="form-pedido" id="form-pedido">
       <div class="box box-pedido"> 

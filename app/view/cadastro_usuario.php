@@ -19,7 +19,11 @@
       $email = isset($_POST['email']) ? $_POST['email'] : false;
       $sql = mysqli_query($conexão, "INSERT INTO funcionario(cpf, nome, sobrenome, senha, email) 
       VALUES('$cpf', '$nome', '$sobrenome', '$senha', '$email')");
-
+      session_start();
+      if (!isset($_SESSION['EmailUsuario']) AND !isset($_SESSION['SenhaUsuario'])) {
+        header("Location: index.php");
+        exit;        
+      }
     ?>
 
   	<meta charset="UTF-8">
