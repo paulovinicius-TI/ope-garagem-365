@@ -10,8 +10,18 @@
 
 </head>
   <body id="top" data-spy="scroll">
+    <div class="horizontal-menu">
+    </div>
     <header id="home">
       <div class="vertical-menu">
+      <div class="welcome-username">        
+      <?php
+        $conexao = mysqli_connect("localhost", "root", "", "cadastro");
+        $dados = mysqli_query($conexao, "SELECT * FROM funcionario");
+        $funcionario = mysqli_fetch_array($dados);
+        echo 'Seja bem-vindo: '.$funcionario['nome'];
+      ?>
+      </div>
         <img class="logo-menu" src="../assets/images/logo.png">
         <a href="cadastro_usuario.php" class="btnMenu"><i class="fas fa-user-plus menu-icons"></i>Usuários</a>
         <a href="cadastro_cliente.php" class="btnMenu"><i class="fas fa-address-card menu-icons"></i>Clientes</a>
