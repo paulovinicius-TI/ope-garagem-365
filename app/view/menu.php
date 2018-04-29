@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <?php
+    include "../controller/AcessoRestrito.php";
+  ?>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/flexslider.css">
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
