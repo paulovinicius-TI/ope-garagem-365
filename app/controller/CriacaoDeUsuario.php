@@ -1,10 +1,5 @@
 <?php 
-  $host = 'localhost';
-  $user = 'root';
-  $pass = '';
-  $banco = 'cadastro';
-  $conexão = mysqli_connect($host, $user, $pass) or die(mysqli_error());
-  mysqli_select_db($conexão, $banco) or die(mysqli_error());
+  include "../../database/conexao.php";
 
   $cpf = isset($_POST['cpf']) ? $_POST['cpf'] : false;
   $nome = isset($_POST['nome']) ? $_POST['nome'] : false;

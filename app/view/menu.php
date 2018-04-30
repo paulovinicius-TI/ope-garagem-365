@@ -19,9 +19,9 @@
       <div class="vertical-menu">
       <div class="welcome-username">        
       <?php
-        $conexao = mysqli_connect("localhost", "root", "", "cadastro");
+        include "../../database/conexao.php";
         $email = $_SESSION['EmailUsuario'];
-        $dados = mysqli_query($conexao, "SELECT * FROM funcionario WHERE email = '$email'");
+        $dados = mysqli_query($conexão, "SELECT * FROM funcionario WHERE email = '$email'");
         $funcionario = mysqli_fetch_array($dados);
         echo 'Seja bem-vindo: '.$funcionario['nome'];
       ?>
