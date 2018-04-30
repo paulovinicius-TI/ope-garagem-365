@@ -1,5 +1,5 @@
 <?php
-    include "../../database/conexao.php";
+    include "../model/conexao.php";
 
 ?>
 

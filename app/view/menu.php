@@ -19,7 +19,7 @@
       <div class="vertical-menu">
       <div class="welcome-username">        
       <?php
-        include "../../database/conexao.php";
+        include "../model/conexao.php";
         $email = $_SESSION['EmailUsuario'];
         $dados = mysqli_query($conexão, "SELECT email, nome FROM funcionario WHERE email = '$email'");
         $funcionario = mysqli_fetch_array($dados);
