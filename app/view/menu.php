@@ -46,7 +46,5 @@
         });
       }
     </script>
-    <script src="../assets/js/mask.js"></script>
-
   </body>
 </html>

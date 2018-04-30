@@ -32,48 +32,48 @@
       </tr>
       <tr id="linhaParaClonar">
         <td><input type="text" name="NomeProd"></td>
-        <td><input type="text" name="PrecoProd"></td>
+        <td><input type="text" class="js-mask-money" name="PrecoProd"></td>
         <td><input type="text" name="QTDProd"></td>
         <td><textarea id="DescProd" rows="1"></textarea></td>
       </tr>
       <tr>
         <td><input type="text" name="NomeProd"></td>
-        <td><input type="text" name="PrecoProd"></td>
-        <td><input type="text" name="QTDProd"></td>
-        <td><textarea id="DescProd" rows="1"></textarea></td>
-
-      </tr>
-      <tr>
-        <td><input type="text" name="NomeProd"></td>
-        <td><input type="text" name="PrecoProd"></td>
+        <td><input type="text" class="js-mask-money" name="PrecoProd"></td>
         <td><input type="text" name="QTDProd"></td>
         <td><textarea id="DescProd" rows="1"></textarea></td>
 
       </tr>
       <tr>
         <td><input type="text" name="NomeProd"></td>
-        <td><input type="text" name="PrecoProd"></td>
+        <td><input type="text" class="js-mask-money" name="PrecoProd"></td>
         <td><input type="text" name="QTDProd"></td>
         <td><textarea id="DescProd" rows="1"></textarea></td>
 
       </tr>
       <tr>
         <td><input type="text" name="NomeProd"></td>
-        <td><input type="text" name="PrecoProd"></td>
+        <td><input type="text" class="js-mask-money" name="PrecoProd"></td>
         <td><input type="text" name="QTDProd"></td>
         <td><textarea id="DescProd" rows="1"></textarea></td>
 
       </tr>
       <tr>
         <td><input type="text" name="NomeProd"></td>
-        <td><input type="text" name="PrecoProd"></td>
+        <td><input type="text" class="js-mask-money" name="PrecoProd"></td>
         <td><input type="text" name="QTDProd"></td>
         <td><textarea id="DescProd" rows="1"></textarea></td>
 
       </tr>
       <tr>
         <td><input type="text" name="NomeProd"></td>
-        <td><input type="text" name="PrecoProd"></td>
+        <td><input type="text" class="js-mask-money" name="PrecoProd"></td>
+        <td><input type="text" name="QTDProd"></td>
+        <td><textarea id="DescProd" rows="1"></textarea></td>
+
+      </tr>
+      <tr>
+        <td><input type="text" name="NomeProd"></td>
+        <td><input type="text" class="js-mask-money" name="PrecoProd"></td>
         <td><input type="text" name="QTDProd"></td>
         <td><textarea id="DescProd" rows="1"></textarea></td>
 
@@ -89,4 +89,7 @@
   }
   </script>
   </body>
+<script src="../assets/js/jquery-3.2.1.min.js"></script>
+<script src="../assets/js/jquery.mask.min.js"></script>
+<script src="../assets/js/mascaras.js"></script>
 </html>
