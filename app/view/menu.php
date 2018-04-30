@@ -21,7 +21,7 @@
       <?php
         include "../../database/conexao.php";
         $email = $_SESSION['EmailUsuario'];
-        $dados = mysqli_query($conexão, "SELECT * FROM funcionario WHERE email = '$email'");
+        $dados = mysqli_query($conexão, "SELECT email, nome FROM funcionario WHERE email = '$email'");
         $funcionario = mysqli_fetch_array($dados);
         echo 'Seja bem-vindo: '.$funcionario['nome'];
       ?>

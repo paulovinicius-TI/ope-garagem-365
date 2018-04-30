@@ -365,3 +365,8 @@ border: 1px solid #222222;
     margin: 20px;
     padding: 10px;
 }
+.tabela-lista-usuarios{
+    margin-left: 400px;
+    background: black;
+    color: white;
+}
