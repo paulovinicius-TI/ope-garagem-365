@@ -95,7 +95,7 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`cpf`, `nome`, `sobrenome`, `senha`, `email`, `tipo`) VALUES
-('00000000000', 'ze', 'teste', '123456', 'ex@ex.com', 0),
+('00000000000', 'ze', 'teste', '123456', 'ex@ex.com', 1),
 ('', '', '', '', '', 0);
 
 -- --------------------------------------------------------
