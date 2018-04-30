@@ -8,9 +8,9 @@ $(document).ready(function() {
 	// mascara CEP
 	$('.js-cep-mascara').mask('00000-000', {reverse: false});
 	// mascara telefone
-	$('.js-telefone-mascara').mask('(00) 0000-0000', {reverse: false});
+	$('.js-telefone-mascara').mask('(00)0000-0000', {reverse: false});
 	// mascara celular
-	$('.js-celular-mascara').mask('(00) 00000-0000', {reverse: false});
+	$('.js-celular-mascara').mask('(00)00000-0000', {reverse: false});
 	//mascara para valor monetario
 	$(".js-mask-money").maskMoney({prefix: 'R$ ', allowNegative: false, allowZero: true, defaultZero: true, thousands: '.', decimal: ',' , affixesStay : true});
 

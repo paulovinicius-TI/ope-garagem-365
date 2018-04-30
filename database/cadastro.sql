@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 29-Abr-2018 às 16:07
+-- Generation Time: 30-Abr-2018 às 18:30
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cliente` (
-  `cpf` varchar(11) NOT NULL,
+  `cpf` varchar(14) NOT NULL,
   `nome` varchar(15) NOT NULL,
   `sobrenome` varchar(15) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -44,7 +44,35 @@ CREATE TABLE `contato` (
   `id` int(11) NOT NULL,
   `telefone` varchar(15) NOT NULL,
   `email` varchar(40) NOT NULL,
-  `cpf_cliente` varchar(11) NOT NULL
+  `cpf_cliente` varchar(14) NOT NULL,
+  `id_fornec` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `endereco`
+--
+
+CREATE TABLE `endereco` (
+  `id` int(11) NOT NULL,
+  `logradouro` varchar(40) NOT NULL,
+  `numero` varchar(8) NOT NULL,
+  `cep` char(9) NOT NULL,
+  `id_fornec` int(11) NOT NULL,
+  `cpf_cliente` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `fornecedor`
+--
+
+CREATE TABLE `fornecedor` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(15) NOT NULL,
+  `descricao` varchar(30) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -54,7 +82,7 @@ CREATE TABLE `contato` (
 --
 
 CREATE TABLE `funcionario` (
-  `cpf` varchar(11) NOT NULL,
+  `cpf` varchar(14) NOT NULL,
   `nome` varchar(15) NOT NULL,
   `sobrenome` varchar(15) NOT NULL,
   `senha` char(32) NOT NULL,
@@ -69,6 +97,50 @@ CREATE TABLE `funcionario` (
 INSERT INTO `funcionario` (`cpf`, `nome`, `sobrenome`, `senha`, `email`, `tipo`) VALUES
 ('00000000000', 'ze', 'teste', '123456', 'ex@ex.com', 0),
 ('', '', '', '', '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `pagamento`
+--
+
+CREATE TABLE `pagamento` (
+  `forma_pagamento` tinyint(4) NOT NULL,
+  `descricao` varchar(30) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `pedido`
+--
+
+CREATE TABLE `pedido` (
+  `numero` int(11) NOT NULL,
+  `status` tinyint(4) NOT NULL,
+  `descricao` varchar(40) NOT NULL,
+  `data_pedido` datetime NOT NULL,
+  `data_pagamento` datetime NOT NULL,
+  `cpf_func` varchar(14) NOT NULL,
+  `cpf_cliente` varchar(14) NOT NULL,
+  `id_formapaga` tinyint(4) NOT NULL,
+  `cod_produto` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `produto`
+--
+
+CREATE TABLE `produto` (
+  `codigo` int(11) NOT NULL,
+  `nome` varchar(20) NOT NULL,
+  `preco_unid` int(11) NOT NULL,
+  `qtd` int(11) NOT NULL,
+  `descricao` varchar(40) NOT NULL,
+  `id_fornec` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -85,13 +157,51 @@ ALTER TABLE `cliente`
 --
 ALTER TABLE `contato`
   ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_cpf_cliente` (`cpf_cliente`),
+  ADD KEY `fk_id_fornec` (`id_fornec`);
+
+--
+-- Indexes for table `endereco`
+--
+ALTER TABLE `endereco`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_id_fornec` (`id_fornec`),
   ADD KEY `fk_cpf_cliente` (`cpf_cliente`);
+
+--
+-- Indexes for table `fornecedor`
+--
+ALTER TABLE `fornecedor`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `funcionario`
 --
 ALTER TABLE `funcionario`
   ADD PRIMARY KEY (`cpf`);
+
+--
+-- Indexes for table `pagamento`
+--
+ALTER TABLE `pagamento`
+  ADD PRIMARY KEY (`forma_pagamento`);
+
+--
+-- Indexes for table `pedido`
+--
+ALTER TABLE `pedido`
+  ADD PRIMARY KEY (`numero`),
+  ADD KEY `fk_cpf_func` (`cpf_func`),
+  ADD KEY `fk_cpf_cliente` (`cpf_cliente`),
+  ADD KEY `fk_id_formapaga` (`id_formapaga`),
+  ADD KEY `fk_cod_produto` (`cod_produto`);
+
+--
+-- Indexes for table `produto`
+--
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`codigo`),
+  ADD KEY `fk_id_fornec` (`id_fornec`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -102,6 +212,24 @@ ALTER TABLE `funcionario`
 --
 ALTER TABLE `contato`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `endereco`
+--
+ALTER TABLE `endereco`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `fornecedor`
+--
+ALTER TABLE `fornecedor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pedido`
+--
+ALTER TABLE `pedido`
+  MODIFY `numero` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
