@@ -104,10 +104,10 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 }
 
 .box-cadastro-cliente{
-    width: 546px !important;
+    width: 546px;
 }
 .box-cadastro-usuario{
-    width: 546px !important;
+    width: 546px;
 }
 
 
@@ -365,8 +365,43 @@ border: 1px solid #222222;
     margin: 20px;
     padding: 10px;
 }
-.tabela-lista-usuarios{
-    margin-left: 400px;
-    background: black;
-    color: white;
+
+@media screen and (max-width: 765px){
+	body{
+		background-size: 310%;
+	}
+
+	.box{
+		width: 330px;
+        margin: 50px 23px;
+        position: absolute;
+	}
+
+    #MobileHome{
+        z-index: 100;
+        right: 415px;
+        transition: all 250ms linear;
+    }
+
+    #MobileHome .toggle-btn{
+        position: absolute;
+        left: 310px;
+        top: 20px;
+    }
+
+    #MobileHome .toggle-btn span{
+        display: block;
+        width: 40px;
+        height: 5px;
+        background: white;
+        margin: 8px 0px;
+    }
+
+    .active{
+        right: 135px !important;
+    }
+
+    .vertical-menu{
+        width: 280px;
+    }
 }

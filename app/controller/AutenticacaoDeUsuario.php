@@ -22,7 +22,7 @@
 	<?php
 	$email = $_POST['EmailUsuario'];
 	$senha = $_POST['SenhaUsuario'];
-	$sql = mysqli_query($conexão,"SELECT * FROM funcionario WHERE email = '$email' and senha = '$senha'") or die(mysqli_error());
+	$sql = mysqli_query($conexao,"SELECT * FROM funcionario WHERE email = '$email' and senha = '$senha'") or die(mysqli_error());
 
 	$row = mysqli_num_rows($sql);
 	
