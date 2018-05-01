@@ -10,9 +10,9 @@
 	echo "<th>Email</th>";
 	echo "<th>CPF</th>";
 	echo "</tr>";
-  include "../../database/conexao.php";	
+  include "../model/conexao.php";	
   $sql = "SELECT * FROM funcionario";
-  $retorno = mysqli_query($conexão, $sql) or die ('Erro');
+  $retorno = mysqli_query($conexao, $sql) or die ('Erro');
 	?>
 
 	<meta charset="UTF-8">
@@ -38,7 +38,7 @@ while ($registro = mysqli_fetch_array($retorno)){
 	echo "<td>". $cpf ."</td>";
 	echo "</tr>";
 }
-mysqli_close($conexão);
+mysqli_close($conexao);
 echo "</table>";
 ?>
 
