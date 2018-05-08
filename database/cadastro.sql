@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 30-Abr-2018 às 18:30
+-- Generation Time: 09-Maio-2018 às 00:49
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -56,11 +56,13 @@ CREATE TABLE `contato` (
 
 CREATE TABLE `endereco` (
   `id` int(11) NOT NULL,
+  `cidade` varchar(15) NOT NULL,
   `logradouro` varchar(40) NOT NULL,
   `numero` varchar(8) NOT NULL,
+  `bairro` varchar(20) NOT NULL,
   `cep` char(9) NOT NULL,
   `id_fornec` int(11) NOT NULL,
-  `cpf_cliente` int(11) NOT NULL
+  `cpf_cliente` varchar(14) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -85,7 +87,7 @@ CREATE TABLE `funcionario` (
   `cpf` varchar(14) NOT NULL,
   `nome` varchar(15) NOT NULL,
   `sobrenome` varchar(15) NOT NULL,
-  `senha` char(32) NOT NULL,
+  `senha` varchar(20) NOT NULL,
   `email` varchar(40) NOT NULL,
   `tipo` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -95,7 +97,7 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`cpf`, `nome`, `sobrenome`, `senha`, `email`, `tipo`) VALUES
-('00000000000', 'ze', 'teste', '123456', 'ex@ex.com', 1),
+('00000000000', 'ze', 'teste', '123456', 'ex@ex.com', 0),
 ('', '', '', '', '', 0);
 
 -- --------------------------------------------------------
@@ -211,13 +213,13 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT for table `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `endereco`
 --
 ALTER TABLE `endereco`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `fornecedor`
