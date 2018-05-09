@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09-Maio-2018 às 00:49
+-- Generation Time: 09-Maio-2018 às 22:28
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -97,8 +97,9 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`cpf`, `nome`, `sobrenome`, `senha`, `email`, `tipo`) VALUES
-('00000000000', 'ze', 'teste', '123456', 'ex@ex.com', 0),
-('', '', '', '', '', 0);
+('00000000000', 'ze', 'teste', '123456', 'ex@ex.com', 1),
+('', '', '', '', '', 0),
+('365.465.465-46', 'func', 'comum', '123456', 'func@comum.com', 0);
 
 -- --------------------------------------------------------
 
@@ -213,13 +214,13 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT for table `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `endereco`
 --
 ALTER TABLE `endereco`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `fornecedor`

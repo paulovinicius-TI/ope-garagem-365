@@ -70,11 +70,6 @@ a {
     background-color: #1463987d;
     margin-left: 20px;
 }
-.vertical-menu a.active {
-    background-color: #146398;
-    color: white;
-    margin-left: 0px;
-}
 
 .menu-icons{
     margin-right: 12px;

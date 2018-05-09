@@ -4,7 +4,6 @@
   <?php 
   include "menu.php";
   ?>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
@@ -47,4 +46,5 @@
     </div>
   </form>
 </body>
+<script src="../assets/js/jquery.mask.min.js"></script>
 </html>
