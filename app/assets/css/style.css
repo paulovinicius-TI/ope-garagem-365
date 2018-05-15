@@ -343,13 +343,13 @@ border: 1px solid #222222;
     font-weight: 600;
 }
 
-.AddProd .btn-adicionar{
+/*.AddProd .btn-adicionar{
     margin: 20px;
     padding: 10px;
     color: white;
     background: #ff0000a3;
     font-weight: 600;
-}
+}*/
 
 .valor-total{
     float: left;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09-Maio-2018 às 22:28
+-- Generation Time: 16-Maio-2018 às 00:45
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -139,10 +139,9 @@ CREATE TABLE `pedido` (
 CREATE TABLE `produto` (
   `codigo` int(11) NOT NULL,
   `nome` varchar(20) NOT NULL,
-  `preco_unid` int(11) NOT NULL,
+  `preco_unid` varchar(8) NOT NULL,
   `qtd` int(11) NOT NULL,
-  `descricao` varchar(40) NOT NULL,
-  `id_fornec` int(11) NOT NULL
+  `descricao` varchar(40) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -203,8 +202,7 @@ ALTER TABLE `pedido`
 -- Indexes for table `produto`
 --
 ALTER TABLE `produto`
-  ADD PRIMARY KEY (`codigo`),
-  ADD KEY `fk_id_fornec` (`id_fornec`);
+  ADD PRIMARY KEY (`codigo`);
 
 --
 -- AUTO_INCREMENT for dumped tables
