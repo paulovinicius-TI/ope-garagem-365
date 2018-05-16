@@ -3,15 +3,14 @@
 <head>
 	<?php 
 	include "menu.php";
-	echo "<table class='tabela-lista-usuarios' border=1>";
+	echo "<table class='tabela-lista-fornecedores' border=1>";
 	echo "<tr>";
+	echo "<th>Id</th>";
 	echo "<th>Nome</th>";
-	echo "<th>Sobreome</th>";
-	echo "<th>Email</th>";
-	echo "<th>CPF</th>";
+	echo "<th>Descrição</th>";
 	echo "</tr>";
   include "../model/conexao.php";	
-  $sql = "SELECT * FROM funcionario";
+  $sql = "SELECT * FROM fornecedor";
   $retorno = mysqli_query($conexao, $sql) or die ('Erro');
 	?>
 
@@ -20,22 +19,20 @@
 	<meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
 	<meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
-	<title>Usuários Cadastrados - Garagem</title>
+	<title>Fornecedores Cadastrados - Garagem</title>
 
 </head>
 <body id="top" data-spy="scroll">
 <?php
 while ($registro = mysqli_fetch_array($retorno)){
+	$id = $registro['id'];
 	$nome = $registro['nome'];
-	$sobrenome = $registro['sobrenome'];
-	$email = $registro['email'];
-	$cpf = $registro['cpf'];
+	$descricao = $registro['descricao'];
 
 	echo"<tr>";
+	echo "<td>". $id ."</td>";
 	echo "<td>". $nome ."</td>";
-	echo "<td>". $sobrenome ."</td>";
-	echo "<td>". $email."</td>";
-	echo "<td>". $cpf ."</td>";
+	echo "<td>". $descricao."</td>";
 	echo "</tr>";
 }
 mysqli_close($conexao);
