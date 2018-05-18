@@ -2,7 +2,8 @@
 <html lang="pt-br">
   <head>
     <?php 
-      include "menu.php";
+  include "menu.php";
+  include "../controller/UrlRestritaLogado.php";
   include "../model/conexao.php"; 
   $sql = "SELECT * FROM produto";
   $retorno = mysqli_query($conexao, $sql) or die ('Erro');

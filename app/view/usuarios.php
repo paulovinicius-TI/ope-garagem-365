@@ -3,6 +3,7 @@
 <head>
 	<?php 
 	include "menu.php";
+	include "../controller/UrlRestritaLogado.php";
 	echo "<table class='tabela-lista-usuarios' border=1>";
 	echo "<tr>";
 	echo "<th>Nome</th>";
