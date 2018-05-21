@@ -8,7 +8,7 @@
 <head>
 	<script type="text/javascript">
 		function loginsuccessfully(){
-			setTimeout("window.location='../view/cadastro_usuario.php'", 1000);
+			setTimeout("window.location='../view/cadastro_cliente.php'", 1000);
 		}
 
 		function loginfailed(){

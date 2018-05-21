@@ -28,7 +28,7 @@
 
       <label>
         <span>Descrição</span>
-        <textarea class="input-text" id="descricao-fornecedor" name="descricao-fornecedor" rows="2"></textarea>
+        <textarea class="input-text" id="descricao-fornecedor" name="descricao-fornecedor" rows="2" placeholder="até 200 caracteres"></textarea>
       </label>   
 
       <label>

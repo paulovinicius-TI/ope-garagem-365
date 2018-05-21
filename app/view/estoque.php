@@ -35,6 +35,7 @@
           <th>Quantidade</th>
           <th>Descrição</th>
           <th>Código</th>
+          <th>Total</th>
         </tr>
         <tr id="linhaParaClonar">
           <td><input type="text" name="NomeProd"></td>
@@ -42,6 +43,7 @@
           <td><input type="number" name="QTDProd"></td>
           <td><textarea id="DescProd" name="DescricProd" rows="1"></textarea></td>
           <td><input type="number" name="CodProd"></td>
+          <td><input type="number" readonly="" name="Total"></td>
         </tr>
           <?php
           while ($registro = mysqli_fetch_array($retorno)){
@@ -50,12 +52,14 @@
             $preco_unid = $registro['preco_unid'];
             $qtd = $registro['qtd'];
             $descricao = $registro['descricao'];
+            $soma = $preco_unid * $qtd;
 
             echo '<td><input type="text" readonly value='. $nome .'></td>';
             echo '<td><input type="text" readonly class="js-mask-money" placeholder="R$" value='. $preco_unid .'></td>';
             echo '<td><input type="number" readonly value='. $qtd .'></td>';
             echo '<td><textarea id="DescProd" readonly rows="1">'.$descricao.'</textarea></td>';
             echo '<td><input type="number" readonly value='. $codigo .'></td>';
+            echo '<td><span>R$ '.$soma.'</span></td>';
             echo '</tr>';
           }
           mysqli_close($conexao);

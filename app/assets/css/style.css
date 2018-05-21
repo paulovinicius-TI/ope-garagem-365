@@ -41,7 +41,7 @@ a {
 		transition: all linear .3s;
 }
 .logo-menu{
-		width: 175px;
+		width: 200px;
 		margin-left: 40px;
 }
 .vertical-menu {
@@ -307,7 +307,7 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 .TabelaEstoque {
 	font-family: arial, sans-serif;
 	border-collapse: collapse;
-	width: 78%;
+	width: 76%;
 	position: relative;
 	margin-left: 300px;
 	border: 1px solid #262626;
@@ -316,7 +316,7 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 
 .TabelaEstoque td, th {
 	border: 1px solid #555;
-	text-align: left;
+	text-align: center;
 	padding: 8px;
 }
 
@@ -335,6 +335,7 @@ color: white;
 .TabelaEstoque td input{
 background: #222222;
 border: 1px solid #222222;
+width: 100%;
 }
 
 .TabelaEstoque td textarea{
@@ -380,6 +381,12 @@ border: 1px solid #222222;
 }
 
 .tabela-lista-fornecedores{
+		margin-left: 400px;
+		background: black;
+		color: white;
+}
+
+.tabela-lista-clientes{
 		margin-left: 400px;
 		background: black;
 		color: white;
@@ -442,18 +449,22 @@ border: 1px solid #222222;
 		}
 
 		.tabela-lista-fornecedores{
-				margin-left: 25%;
+				margin: 0;
+		}
+
+		.tabela-lista-clientes{
+			margin: 0;
 		}
 
 		.TabelaEstoque{
-				position: relative;
+				margin: 0;
 		}
 
 		.TabelaEstoque td, th{
-				padding: 7px;
+				padding: 7px !important;
 		}
 		.TabelaEstoque input, textarea{
-				width: 60px;
+				width: 60px !important;
 		}
 
 		.box label{

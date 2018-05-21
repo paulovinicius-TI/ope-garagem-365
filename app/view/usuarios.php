@@ -4,13 +4,6 @@
 	<?php 
 	include "menu.php";
 	include "../controller/UrlRestritaLogado.php";
-	echo "<table class='tabela-lista-usuarios' border=1>";
-	echo "<tr>";
-	echo "<th>Nome</th>";
-	echo "<th>Sobreome</th>";
-	echo "<th>Email</th>";
-	echo "<th>CPF</th>";
-	echo "</tr>";
   include "../model/conexao.php";	
   $sql = "SELECT * FROM funcionario";
   $retorno = mysqli_query($conexao, $sql) or die ('Erro');
@@ -25,6 +18,16 @@
 
 </head>
 <body id="top" data-spy="scroll">
+<?php
+	echo "<table class='tabela-lista-usuarios' border=1>";
+	echo "<tr>";
+	echo "<th>Nome</th>";
+	echo "<th>Sobreome</th>";
+	echo "<th>Email</th>";
+	echo "<th>CPF</th>";
+	echo "</tr>";
+
+?>
 <?php
 while ($registro = mysqli_fetch_array($retorno)){
 	$nome = $registro['nome'];
@@ -44,7 +47,4 @@ echo "</table>";
 ?>
 
 </body>
-<script src="../assets/js/jquery-3.2.1.min.js"></script>
-<script src="../assets/js/jquery.mask.min.js"></script>
-<script src="../assets/js/mascaras.js"></script>
 </html>

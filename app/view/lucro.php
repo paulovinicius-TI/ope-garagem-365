@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="container" style="text-align:center">
+    <div class="container" style="text-align:center; color: red;">
       PAGINA EM MANUTENÇÃO
     </div>                             
   </body>
