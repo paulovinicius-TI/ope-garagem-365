@@ -1,6 +1,5 @@
 <?php 
 	include "../model/conexao.php";	
-	include "../controller/AcessoRestrito.php";
 	echo "<table class='tabela-lista-clientes' border=1>";
 	echo "<tr>";
 	echo "<th>CPF</th>";
