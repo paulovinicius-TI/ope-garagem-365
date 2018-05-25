@@ -78,7 +78,7 @@ a {
 form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 
 .box {
-		top: 30px;
+		top: 80px;
 		margin:0 auto;
 		width:600px;
 		background:#222222;
@@ -375,21 +375,18 @@ border: 1px solid #222222;
 }
 
 .tabela-lista-usuarios{
-		margin-left: 400px;
-		background: black;
-		color: white;
+		background: white;
+		color: black;
 }
 
 .tabela-lista-fornecedores{
-		margin-left: 400px;
-		background: black;
-		color: white;
+		background: white;
+		color: black;
 }
 
 .tabela-lista-clientes{
-		margin-left: 400px;
-		background: black;
-		color: white;
+		background: white;
+		color: black;
 }
 
 #nome-fornecedor{
@@ -399,6 +396,18 @@ border: 1px solid #222222;
 #descricao-fornecedor{
 		color: #bbbbbb; 
 		width: 96%
+}
+
+.see-cad, .see-cad:focus{
+    float: right;
+    margin: 50px;
+    background-color: #262626;
+    border-color: white;
+    color: white;
+}
+
+.modal-content{
+	position: absolute;
 }
 
 @media screen and (max-width: 765px){

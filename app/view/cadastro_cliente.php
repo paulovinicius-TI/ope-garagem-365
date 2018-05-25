@@ -17,6 +17,8 @@
 </head>
 <body id="top" data-spy="scroll">
 
+  <button type="button" class="btn btn-lg see-cad" data-toggle="modal" data-target="#myModal">Cadastrados</button>
+
   <form name="meuForm" method="post" id="formulario" action="../controller/CadastroCliente.php">
     <div class="box box-cadastro-cliente"> 
       <h1><center><i class="fas fa-address-card menu-icons"></i>Cadastro de cliente</center></h1>
@@ -55,5 +57,26 @@
     </div>
 
   </form>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Clientes Cadastrados</h4>
+      </div>
+      <div class="modal-body">
+        <?php
+          include "clientes.php";
+        ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 </body>
 </html>

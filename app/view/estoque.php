@@ -55,7 +55,7 @@
             $soma = $preco_unid * $qtd;
 
             echo '<td><input type="text" readonly value='. $nome .'></td>';
-            echo '<td><input type="text" readonly class="js-mask-money" placeholder="R$" value='. $preco_unid .'></td>';
+            echo '<td><input type="text" readonly class="js-mask-money" placeholder="R$" value="R$ '. $preco_unid .'"></td>';
             echo '<td><input type="number" readonly value='. $qtd .'></td>';
             echo '<td><textarea id="DescProd" readonly rows="1">'.$descricao.'</textarea></td>';
             echo '<td><input type="number" readonly value='. $codigo .'></td>';

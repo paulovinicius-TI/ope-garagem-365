@@ -4,6 +4,9 @@
   <?php 
   include "menu.php";
   include "../controller/UrlRestritaLogado.php";
+  include "../model/conexao.php"; 
+  $sql = "SELECT * FROM funcionario";
+  $retorno = mysqli_query($conexao, $sql) or die ('Erro');
   ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -14,6 +17,8 @@
 
 </head>
 <body id="top" data-spy="scroll">
+
+<button type="button" class="btn btn-lg see-cad" data-toggle="modal" data-target="#myModal">Cadastrados</button>
 
   <form name="meuForm" method="POST" id="formulario" action="../controller/CriacaoDeUsuario.php">
     <div class="box box-cadastro-usuario"> 
@@ -46,6 +51,27 @@
       </label>           
     </div>
   </form>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Usuários Cadastrados</h4>
+      </div>
+      <div class="modal-body">
+        <?php
+          include "usuarios.php";
+        ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 </body>
 <script src="../assets/js/jquery.mask.min.js"></script>
 </html>

@@ -10,6 +10,7 @@
 	<script src="../assets/js/jquery.mask.min.js"></script>
 	<script src="../assets/js/mascaras.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/flexslider.css">
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">

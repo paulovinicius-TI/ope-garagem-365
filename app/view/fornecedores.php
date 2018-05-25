@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<?php 
-	include "menu.php";
+<?php 
 	include "../controller/UrlRestritaLogado.php";
 	echo "<table class='tabela-lista-fornecedores' border=1>";
 	echo "<tr>";
@@ -18,37 +14,27 @@
 	echo "<th>Email</th>";
 	echo "</tr>";
   include "../model/conexao.php";	
-  $sqlF = "SELECT * FROM fornecedor";
+  $sqlF = "SELECT * FROM fornecedor ORDER BY id";
   $retornoF = mysqli_query($conexao, $sqlF) or die ('Erro');
-  $sqlE = "SELECT * FROM endereco WHERE cpf_cliente = ''";
+  $sqlE = "SELECT * FROM endereco WHERE cpf_cliente = '' ORDER BY id_fornec";
   $retornoE = mysqli_query($conexao, $sqlE) or die ('Erro');
-  $sqlC = "SELECT * FROM contato WHERE cpf_cliente = ''";
+  $sqlC = "SELECT * FROM contato WHERE cpf_cliente = '' ORDER BY id_fornec";
   $retornoC = mysqli_query($conexao, $sqlC) or die ('Erro');
-	?>
+?>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
-	<meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
-	<title>Fornecedores Cadastrados - Garagem</title>
-
-</head>
-<body id="top" data-spy="scroll">
 <?php
-while ($registro = mysqli_fetch_array($retornoF)){
-	$id = $registro['id'];
-	$nome = $registro['nome'];
-	$descricao = $registro['descricao'];
-while ($registro = mysqli_fetch_array($retornoE)){
-	$cep = $registro['cep'];
-	$logradouro = $registro['logradouro'];
-	$numero = $registro['numero'];
-	$bairro = $registro['bairro'];
-	$cidade = $registro['cidade'];
-while ($registro = mysqli_fetch_array($retornoC)){
-	$telefone = $registro['telefone'];
-	$email = $registro['email'];
+while ($registroF = mysqli_fetch_array($retornoF) and $registroE = mysqli_fetch_array($retornoE) and $registroC = mysqli_fetch_array($retornoC)){
+	$id = $registroF['id'];
+	$nome = $registroF['nome'];
+	$descricao = $registroF['descricao'];
+	$cep = $registroE['cep'];
+	$logradouro = $registroE['logradouro'];
+	$numero = $registroE['numero'];
+	$bairro = $registroE['bairro'];
+	$cidade = $registroE['cidade'];
+	$telefone = $registroC['telefone'];
+	$email = $registroC['email'];
 
 	echo"<tr>";
 	echo "<td>". $id ."</td>";
@@ -62,10 +48,7 @@ while ($registro = mysqli_fetch_array($retornoC)){
 	echo "<td>". $telefone."</td>";
 	echo "<td>". $email."</td>";
 	echo "</tr>";
-}}}
+}
 mysqli_close($conexao);
 echo "</table>";
 ?>
-
-</body>
-</html>
