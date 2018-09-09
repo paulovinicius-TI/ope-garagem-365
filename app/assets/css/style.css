@@ -453,10 +453,6 @@ border: 1px solid #222222;
 				margin: 30px 80px;
 		}
 
-		.tabela-lista-usuarios{
-				margin-left: 5%;
-		}
-
 		.tabela-lista-fornecedores{
 				margin: 0;
 		}
@@ -471,9 +467,6 @@ border: 1px solid #222222;
 
 		.TabelaEstoque td, th{
 				padding: 7px !important;
-		}
-		.TabelaEstoque input, textarea{
-				width: 60px !important;
 		}
 
 		.box label{

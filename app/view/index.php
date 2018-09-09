@@ -9,6 +9,7 @@
     <title>Login - Garagem</title>
     
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Raleway" rel="stylesheet">
+    <script src="../assets/js/PasswordToggle.js"></script>
     <link rel="stylesheet" href="../assets/css/flexslider.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
@@ -27,6 +28,7 @@
         <label>
           <span>Senha</span>
           <input type="password" required class="input-text" name="SenhaUsuario" id="UserPass" placeholder="Senha" />
+          <i class="fas fa-eye" onclick="TogglePass()"></i>
         </label>
         <label class="btn-login">
           <input type="submit" class="button" value="Login" />
