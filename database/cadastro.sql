@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Maio-2018 às 21:01
--- Versão do servidor: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Generation Time: 13-Set-2018 às 01:20
+-- Versão do servidor: 10.1.35-MariaDB
+-- versão do PHP: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,6 +34,14 @@ CREATE TABLE `cliente` (
   `sobrenome` varchar(15) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `cliente`
+--
+
+INSERT INTO `cliente` (`cpf`, `nome`, `sobrenome`) VALUES
+('111.111.111-11', 'cliente', 'teste'),
+('222.222.222-22', 'cliente 2', 'teste 2');
+
 -- --------------------------------------------------------
 
 --
@@ -47,6 +55,14 @@ CREATE TABLE `contato` (
   `cpf_cliente` varchar(14) NOT NULL,
   `id_fornec` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `contato`
+--
+
+INSERT INTO `contato` (`id`, `telefone`, `email`, `cpf_cliente`, `id_fornec`) VALUES
+(37, '(11)11111-1111', 'cliente@teste.com', '111.111.111-11', 0),
+(38, '(22)22222-2222', 'cliente@tes2.com', '222.222.222-22', 0);
 
 -- --------------------------------------------------------
 
@@ -64,6 +80,14 @@ CREATE TABLE `endereco` (
   `id_fornec` int(11) NOT NULL,
   `cpf_cliente` varchar(14) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `endereco`
+--
+
+INSERT INTO `endereco` (`id`, `cidade`, `logradouro`, `numero`, `bairro`, `cep`, `id_fornec`, `cpf_cliente`) VALUES
+(45, 'SÃ£o Paulo', 'Rua Ãlvaro Pinto', '11', 'Jardim Maria Estela', '04181-010', 0, '111.111.111-11'),
+(46, 'SÃ£o Paulo', 'Rua Jeremias Junior', '2', 'Vila Nair', '04282-020', 0, '222.222.222-22');
 
 -- --------------------------------------------------------
 
@@ -144,6 +168,13 @@ CREATE TABLE `produto` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`codigo`, `nome`, `preco_unid`, `qtd`, `descricao`) VALUES
+(123, 'Coca-cola', '10', 20, 'simples refrigerante');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -211,13 +242,13 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT for table `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `endereco`
 --
 ALTER TABLE `endereco`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `fornecedor`
