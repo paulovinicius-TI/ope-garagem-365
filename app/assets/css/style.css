@@ -18,6 +18,16 @@ html, header {
 }
 
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
 
 a:hover {
 	text-decoration: none;
@@ -144,12 +154,14 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 		text-align: right;
 		padding-right: 9px;
 }
-.box .label-adc-produto {
+
+/*.box .label-adc-produto {
 		width:98% !important;
 		text-align: left;
 		padding-right: 9px;
 
-}
+}*/
+
 .box .label-valor-total span {
 		text-align: center;
 		float: right;
@@ -159,7 +171,13 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 		width:98% !important;
 }
 
-
+.ClientInOrder{
+	color: white;
+    position: relative;
+    margin: 0px 30px 10px;
+    background: black;
+    text-transform: uppercase;
+}
 
 .box .input-text {
 		margin: 3px 5px;
@@ -236,18 +254,14 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 		border: 1px double green;
 		float: right;
 }
-.box .button-remover-do-pedido{
+.box .button-somar-do-pedido{
 		width: 22px;
 		height: 22px;
 		border-radius: 30px;
-		background-color: red;
-		border: red;
+		background-color: green;
+		border: green;
 		top: 0;
 		margin: 0px 0px 13px 5px;
-}
-.box .qtd-produto{
-		width: 8% !important;
-		float: left;
 }
 
 /*Controle de lucro*/
@@ -261,18 +275,22 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 		float: left;
 		margin-left: 400px;
 }
-.box-pedido label{
-		width: 55% !important;
-		float: left;
-}
+
 
 .box input{
 		background: #262626;
 		color: #bbbbbb;
 }
-.box .adicionar-ao-pedido {
-		padding:8px 10px;
-		width: 57.5%;
+
+#CloneRow{
+	text-align: center;
+}
+
+#linhaClonada input{
+	width: 86px;
+}
+
+.box .adicionar-ao-pedido-nome {
 		height: 25px;
 		background:#262626;
 		border-bottom: 1px double #171717;
@@ -281,16 +299,24 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 		border-right:1px double #333333;
 }
 .box .adicionar-ao-pedido-qtd{
-		padding: 0 !important;
 		margin-left: 4px;
-		width: 8%;
+		width: 35px;
 		height: 25px;
 		background:#262626;
 		border-bottom: 1px double #171717;
 		border-top: 1px double #171717;
 		border-left:1px double #333333;
 		border-right:1px double #333333;
-
+}
+.box .adicionar-ao-pedido-valor{
+		margin-left: 4px;
+		width: 65px;
+		height: 25px;
+		background:#262626;
+		border-bottom: 1px double #171717;
+		border-top: 1px double #171717;
+		border-left:1px double #333333;
+		border-right:1px double #333333;
 }
 .btn-adicionar{
 		left: 0 !important;
@@ -298,10 +324,7 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 .label-btn{
 		text-align: center;
 }
-.box .valor-produto{
-		width: 23% !important;
-		float: left;
-}
+
 /*ESTOQUE*/
 
 .TabelaEstoque {

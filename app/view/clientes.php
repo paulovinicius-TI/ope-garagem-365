@@ -45,8 +45,14 @@ while ($registroCl = mysqli_fetch_array($retornoCl) and $registroE = mysqli_fetc
 	echo "<td>". $cidade."</td>";
 	echo "<td>". $telefone."</td>";
 	echo "<td>". $email."</td>";
+	echo "<td><button><i class='fas fa-pencil-alt'></i>
+				</button>
+				<button><i class='fas fa-trash-alt'></i>
+				</button>
+				</td>";
 	echo "</tr>";
 }
+
 mysqli_close($conexao);
 echo "</table>";
 ?>
