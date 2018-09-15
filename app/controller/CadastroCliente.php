@@ -18,5 +18,5 @@
   	$sqlCont = mysqli_query($conexao, "INSERT INTO contato(telefone, email, cpf_cliente) 
   	VALUES('$telefone', '$email', '$cpf')");
 
-  	header("Location: ../view/cadastro_cliente.php");
+  	header("Location: ../view/lista_cliente.php");
 ?>
