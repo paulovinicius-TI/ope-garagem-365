@@ -1,15 +1,15 @@
     function limpa_formulário_cep() {
 
-      document.getElementById('logradouro-cliente').value=("");
-      document.getElementById('bairro-cliente').value=("");
-      document.getElementById('cidade-cliente').value=("");
+      document.getElementById('logradouro').value=("");
+      document.getElementById('bairro').value=("");
+      document.getElementById('cidade').value=("");
     }
 
     function meu_callback(conteudo) {
       if (!("erro" in conteudo)) {
-        document.getElementById('logradouro-cliente').value=(conteudo.logradouro);
-        document.getElementById('bairro-cliente').value=(conteudo.bairro);
-        document.getElementById('cidade-cliente').value=(conteudo.localidade);
+        document.getElementById('logradouro').value=(conteudo.logradouro);
+        document.getElementById('bairro').value=(conteudo.bairro);
+        document.getElementById('cidade').value=(conteudo.localidade);
         }
         else {
           limpa_formulário_cep();
@@ -27,9 +27,9 @@
 
           if(validacep.test(cep)) {
 
-            document.getElementById('logradouro-cliente').value="carregando...";
-            document.getElementById('bairro-cliente').value="carregando...";
-            document.getElementById('cidade-cliente').value="carregando...";
+            document.getElementById('logradouro').value="carregando...";
+            document.getElementById('bairro').value="carregando...";
+            document.getElementById('cidade').value="carregando...";
 
             var script = document.createElement('script');
 

@@ -1,7 +1,7 @@
 <?php
 if ($funcionario['tipo'] == 1) {
 echo '<a href="cadastro_usuario.php" class="btnMenu" target="_blank"><i class="fas fa-user-plus menu-icons"></i>Usuários</a>';
-echo '<a href="cadastro_cliente.php" class="btnMenu" target="_blank"><i class="fas fa-address-card menu-icons"></i>Clientes</a>';
+echo '<a href="lista_cliente.php" class="btnMenu" target="_blank"><i class="fas fa-address-card menu-icons"></i>Clientes</a>';
 echo '<a href="cadastro_fornecedor.php" class="btnMenu" target="_blank"><i class="fas fa-truck menu-icons"></i>Fornecedores</a>';
 echo '<a href="pedidos.php" class="btnMenu" target="_blank"><i class="fas fa-notes-medical menu-icons"></i></i>Pedidos</a>';
 echo '<a href="estoque.php" class="btnMenu" target="_blank"><i class="fas fa-box-open menu-icons"></i>Estoque</a>';
