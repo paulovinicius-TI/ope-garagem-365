@@ -1,5 +1,23 @@
 <form name="meuForm" method="post" class="form-pedido" id="form-pedido">
   <div class="box box-pedido"> 
+
+<!--STATUS DA COMANDA-->
+
+<?php
+ 
+(isset($_POST["ComandaStatus2"])) ? $ComandaStatus2 = $_POST["ComandaStatus2"] : $ComandaStatus2=1;
+ 
+?>
+
+<div class="StatusPedido">
+<span>Status: </span>
+<select id="ComandaStatus2" name="ComandaStatus2" class="StatusInOrder">
+  <option <?php if ($ComandaStatus2 == 1 ) echo 'selected' ; ?> value="1">Aberto</option>
+  <option <?php if ($ComandaStatus2 == 2 ) echo 'selected' ; ?> value="2">Fechado</option>
+</select>
+</div>
+<!---------->
+
     <h1><center><i class="fas fa-address-card menu-icons"></i>Pedido Nº 3</center></h1>
         <?php 
 				  include "../controller/ClienteEmPedido.php";

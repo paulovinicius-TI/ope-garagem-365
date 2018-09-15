@@ -1,4 +1,4 @@
-<form name="meuForm" method="post" class="form-pedido" id="form-pedido" action="../controller/SalvaPedido2.php">
+<form name="meuForm" method="post" class="form-pedido" id="form-pedido" action="../controller/SalvaPedido.php">
   <div class="box box-pedido"> 
 
 <!--STATUS DA COMANDA-->
@@ -18,13 +18,12 @@
 </select>
 </div>
 <!---------->
-
-    <h1><center><i class="fas fa-address-card menu-icons"></i>Pedido Nº 2</center></h1>
+    <h1><center><i class="fas fa-address-card menu-icons"></i>Pedido Nº 1</center></h1>
         <?php 
 				  include "../controller/ClienteEmPedido.php";
 				  include "../controller/ProdutosEmPedido.php";
 				?>
-    <select class="ClientInOrder2 ClientInOrder" id="ClientInOrder2"><option value=""></option>
+    <select class="ClientInOrder" id="ClientInOrder" name="ClienteName"><option value=""></option>
       <?php while ($row1 = mysqli_fetch_array($result1)):;?>
         <option><?php echo $row1[1];?></option>
       <?php endwhile;?>
@@ -32,6 +31,126 @@
 
     <div id="RowPedidos">
       <div id="CloneRow">
+        <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd"></input>      
+
+        <select class="adicionar-ao-pedido-nome" id="Prod"><option value=""></option>
+          <?php while ($row2 = mysqli_fetch_array($result2)):;?>
+            <option><?php echo $row2[1];?></option>
+          <?php endwhile;?>
+        </select>
+
+        <input type="number" class="adicionar-ao-pedido-valor" id="ValorProd" placeholder="R$"></input>
+<!--         <input type="button" class="button button-somar-do-pedido" value="+" onclick="clonarLinha()" style="width: 23px" /> -->
+      
+      </div>
+    </div>
+
+    <div id="RowPedidos">
+      <div id="CloneRow">
+        <?php 
+          include "../controller/ClienteEmPedido.php";
+          include "../controller/ProdutosEmPedido.php";
+        ?>
+        <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd1"></input>      
+
+        <select class="adicionar-ao-pedido-nome" id="Prod1"><option value=""></option>
+          <?php while ($row2 = mysqli_fetch_array($result2)):;?>
+            <option><?php echo $row2[1];?></option>
+          <?php endwhile;?>
+        </select>
+
+        <input type="number" class="adicionar-ao-pedido-valor" id="ValorProd1" placeholder="R$"></input>
+<!--         <input type="button" class="button button-somar-do-pedido" value="+" onclick="clonarLinha()" style="width: 23px" /> -->
+      
+      </div>
+    </div>
+
+    <div id="RowPedidos">
+      <div id="CloneRow">
+        <?php 
+          include "../controller/ClienteEmPedido.php";
+          include "../controller/ProdutosEmPedido.php";
+        ?>
+        <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd2"></input>      
+
+        <select class="adicionar-ao-pedido-nome" id="Prod2"><option value=""></option>
+          <?php while ($row2 = mysqli_fetch_array($result2)):;?>
+            <option><?php echo $row2[1];?></option>
+          <?php endwhile;?>
+        </select>
+
+        <input type="number" class="adicionar-ao-pedido-valor" id="ValorProd2" placeholder="R$"></input>
+<!--         <input type="button" class="button button-somar-do-pedido" value="+" onclick="clonarLinha()" style="width: 23px" /> -->
+      
+      </div>
+    </div>
+
+    <div id="RowPedidos">
+      <div id="CloneRow">
+        <?php 
+          include "../controller/ClienteEmPedido.php";
+          include "../controller/ProdutosEmPedido.php";
+        ?>
+        <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd3"></input>      
+
+        <select class="adicionar-ao-pedido-nome" id="Prod3"><option value=""></option>
+          <?php while ($row2 = mysqli_fetch_array($result2)):;?>
+            <option><?php echo $row2[1];?></option>
+          <?php endwhile;?>
+        </select>
+
+        <input type="number" class="adicionar-ao-pedido-valor" id="ValorProd3" placeholder="R$"></input>
+<!--         <input type="button" class="button button-somar-do-pedido" value="+" onclick="clonarLinha()" style="width: 23px" /> -->
+      
+      </div>
+    </div>
+
+    <div id="RowPedidos">
+      <div id="CloneRow">
+        <?php 
+          include "../controller/ClienteEmPedido.php";
+          include "../controller/ProdutosEmPedido.php";
+        ?>
+        <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd4"></input>      
+
+        <select class="adicionar-ao-pedido-nome" id="Prod4"><option value=""></option>
+          <?php while ($row2 = mysqli_fetch_array($result2)):;?>
+            <option><?php echo $row2[1];?></option>
+          <?php endwhile;?>
+        </select>
+
+        <input type="number" class="adicionar-ao-pedido-valor" id="ValorProd4" placeholder="R$"></input>
+<!--         <input type="button" class="button button-somar-do-pedido" value="+" onclick="clonarLinha()" style="width: 23px" /> -->
+      
+      </div>
+    </div>
+
+    <div id="RowPedidos">
+      <div id="CloneRow">
+        <?php 
+          include "../controller/ClienteEmPedido.php";
+          include "../controller/ProdutosEmPedido.php";
+        ?>
+        <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd5"></input>      
+
+        <select class="adicionar-ao-pedido-nome" id="Prod5"><option value=""></option>
+          <?php while ($row2 = mysqli_fetch_array($result2)):;?>
+            <option><?php echo $row2[1];?></option>
+          <?php endwhile;?>
+        </select>
+
+        <input type="number" class="adicionar-ao-pedido-valor" id="ValorProd5" placeholder="R$"></input>
+<!--         <input type="button" class="button button-somar-do-pedido" value="+" onclick="clonarLinha()" style="width: 23px" /> -->
+      
+      </div>
+    </div>
+
+    <div id="RowPedidos">
+      <div id="CloneRow">
+        <?php 
+          include "../controller/ClienteEmPedido.php";
+          include "../controller/ProdutosEmPedido.php";
+        ?>
         <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd6"></input>      
 
         <select class="adicionar-ao-pedido-nome" id="Prod6"><option value=""></option>
@@ -46,147 +165,57 @@
       </div>
     </div>
 
-    <div id="RowPedidos">
-      <div id="CloneRow">
-        <?php 
-          include "../controller/ClienteEmPedido.php";
-          include "../controller/ProdutosEmPedido.php";
-        ?>
-        <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd7"></input>      
-
-        <select class="adicionar-ao-pedido-nome" id="Prod7"><option value=""></option>
-          <?php while ($row2 = mysqli_fetch_array($result2)):;?>
-            <option><?php echo $row2[1];?></option>
-          <?php endwhile;?>
-        </select>
-
-        <input type="number" class="adicionar-ao-pedido-valor" id="ValorProd7" placeholder="R$"></input>
-<!--         <input type="button" class="button button-somar-do-pedido" value="+" onclick="clonarLinha()" style="width: 23px" /> -->
-      
-      </div>
-    </div>
-
-    <div id="RowPedidos">
-      <div id="CloneRow">
-        <?php 
-          include "../controller/ClienteEmPedido.php";
-          include "../controller/ProdutosEmPedido.php";
-        ?>
-        <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd8"></input>      
-
-        <select class="adicionar-ao-pedido-nome" id="Prod8"><option value=""></option>
-          <?php while ($row2 = mysqli_fetch_array($result2)):;?>
-            <option><?php echo $row2[1];?></option>
-          <?php endwhile;?>
-        </select>
-
-        <input type="number" class="adicionar-ao-pedido-valor" id="ValorProd8" placeholder="R$"></input>
-<!--         <input type="button" class="button button-somar-do-pedido" value="+" onclick="clonarLinha()" style="width: 23px" /> -->
-      
-      </div>
-    </div>
-
-    <div id="RowPedidos">
-      <div id="CloneRow">
-        <?php 
-          include "../controller/ClienteEmPedido.php";
-          include "../controller/ProdutosEmPedido.php";
-        ?>
-        <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd9"></input>      
-
-        <select class="adicionar-ao-pedido-nome" id="Prod9"><option value=""></option>
-          <?php while ($row2 = mysqli_fetch_array($result2)):;?>
-            <option><?php echo $row2[1];?></option>
-          <?php endwhile;?>
-        </select>
-
-        <input type="number" class="adicionar-ao-pedido-valor" id="ValorProd9" placeholder="R$"></input>
-<!--         <input type="button" class="button button-somar-do-pedido" value="+" onclick="clonarLinha()" style="width: 23px" /> -->
-      
-      </div>
-    </div>
-
-    <div id="RowPedidos">
-      <div id="CloneRow">
-        <?php 
-          include "../controller/ClienteEmPedido.php";
-          include "../controller/ProdutosEmPedido.php";
-        ?>
-        <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd10"></input>      
-
-        <select class="adicionar-ao-pedido-nome" id="Prod10"><option value=""></option>
-          <?php while ($row2 = mysqli_fetch_array($result2)):;?>
-            <option><?php echo $row2[1];?></option>
-          <?php endwhile;?>
-        </select>
-
-        <input type="number" class="adicionar-ao-pedido-valor" id="ValorProd10" placeholder="R$"></input>
-<!--         <input type="button" class="button button-somar-do-pedido" value="+" onclick="clonarLinha()" style="width: 23px" /> -->
-      
-      </div>
-    </div>
-
-    <div id="RowPedidos">
-      <div id="CloneRow">
-        <?php 
-          include "../controller/ClienteEmPedido.php";
-          include "../controller/ProdutosEmPedido.php";
-        ?>
-        <input type="number" class="adicionar-ao-pedido-qtd" min="0" placeholder="Qtd." id="Qtd11"></input>      
-
-        <select class="adicionar-ao-pedido-nome" id="Prod11"><option value=""></option>
-          <?php while ($row2 = mysqli_fetch_array($result2)):;?>
-            <option><?php echo $row2[1];?></option>
-          <?php endwhile;?>
-        </select>
-
-        <input type="number" class="adicionar-ao-pedido-valor" id="ValorProd11" placeholder="R$"></input>
-<!--         <input type="button" class="button button-somar-do-pedido" value="+" onclick="clonarLinha()" style="width: 23px" /> -->
-      
-      </div>
-    </div>
-
-    Valor Total: <input type="text" readonly name="TotalPag1" value="" id="TotalPag1" style="border: none;">
+      Valor Total: <input type="text" readonly name="TotalPag" value="" id="TotalPag">
 
     <label class="label" style="width: 32%">
-      <input type="submit" class="button button-cancelar" value="Fechar Pedido" onclick="saveTextAsFile2()" />
+      <input type="submit" class="button button-fechar" value="Fechar Pedido" onclick="saveTextAsFile1()" />
     </label>         
+  
+    <label class="label" style="width: 38%;margin-left: 70px;">
+      <input type="button" class="button button-limpar-comanda" value="Limpar Comanda" onclick="CleanFormOrder()" />
+    </label>  
+
   </div>
 
     </form>
 
 <script type="text/javascript">
-function saveTextAsFile2() {
+function saveTextAsFile1() {
   var jcontent= [{
-    NomeCliente : document.getElementById("ClientInOrder2").value,
+    NomeCliente : document.getElementById("ClientInOrder").value,
+    Produto : document.getElementById("Prod").value,
+    QtdComprada : document.getElementById("Qtd").value,
+    ValorUnit : document.getElementById("ValorProd").value,
+  },
+  {
+    Produto : document.getElementById("Prod1").value,
+    QtdComprada : document.getElementById("Qtd1").value,
+    ValorUnit : document.getElementById("ValorProd1").value,
+  },
+  {
+    Produto : document.getElementById("Prod2").value,
+    QtdComprada : document.getElementById("Qtd2").value,
+    ValorUnit : document.getElementById("ValorProd2").value,
+  },
+  {
+    Produto : document.getElementById("Prod3").value,
+    QtdComprada : document.getElementById("Qtd3").value,
+    ValorUnit : document.getElementById("ValorProd3").value,
+  },
+  {
+    Produto : document.getElementById("Prod4").value,
+    QtdComprada : document.getElementById("Qtd4").value,
+    ValorUnit : document.getElementById("ValorProd4").value,
+  },
+  {
+    Produto : document.getElementById("Prod5").value,
+    QtdComprada : document.getElementById("Qtd5").value,
+    ValorUnit : document.getElementById("ValorProd5").value,
+  },
+  {
     Produto : document.getElementById("Prod6").value,
     QtdComprada : document.getElementById("Qtd6").value,
     ValorUnit : document.getElementById("ValorProd6").value,
-  },
-  {
-    Produto : document.getElementById("Prod7").value,
-    QtdComprada : document.getElementById("Qtd7").value,
-    ValorUnit : document.getElementById("ValorProd7").value,
-  },
-  {
-    Produto : document.getElementById("Prod8").value,
-    QtdComprada : document.getElementById("Qtd8").value,
-    ValorUnit : document.getElementById("ValorProd8").value,
-  },
-  {
-    Produto : document.getElementById("Prod9").value,
-    QtdComprada : document.getElementById("Qtd9").value,
-    ValorUnit : document.getElementById("ValorProd9").value,
-  },
-  {
-    Produto : document.getElementById("Prod10").value,
-    QtdComprada : document.getElementById("Qtd10").value,
-    ValorUnit : document.getElementById("ValorProd10").value,
-  },
-  {
-    Produto : document.getElementById("Prod11").value,
-    QtdComprada : document.getElementById("Qtd11").value,
-    ValorUnit : document.getElementById("ValorProd11").value,
   }];
 
   var Preco = document.getElementById("ValorProd").value;
@@ -197,8 +226,9 @@ function saveTextAsFile2() {
   var Preco5 = document.getElementById("ValorProd5").value;
   var Preco6 = document.getElementById("ValorProd6").value;
   var Quant = Number(Preco) + Number(Preco1) + Number(Preco2) + Number(Preco3) + Number(Preco4) + Number(Preco5) + Number(Preco6);
-  var TotalQuant = document.getElementById("TotalPag1");
-  TotalQuant.value = Quant;
+  var TotalQuant = document.getElementById("TotalPag");
+  TotalQuant.value = "R$ " + Quant;
+
 
   var x = new Date();
   var myJSON = JSON.stringify(jcontent);
@@ -209,7 +239,7 @@ function saveTextAsFile2() {
     type: 'text/plain'
   });
 
-  var fileNameToSaveAs = document.getElementById("ClientInOrder2").value;
+  var fileNameToSaveAs = document.getElementById("ClientInOrder").value;
 
   var downloadLink = document.createElement("a");
   downloadLink.download = fileNameToSaveAs;
@@ -229,5 +259,16 @@ function saveTextAsFile2() {
 
   downloadLink.click();
 }
+
+function CleanFormOrder(){
+  if (confirm("Tem certeza que quer apagar essa comanda?")) {
+    document.getElementById("form-pedido").reset();
+  }
+
+  else {
+    return false;
+  }
+}
+
 
 </script>

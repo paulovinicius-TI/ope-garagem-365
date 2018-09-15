@@ -11,8 +11,8 @@
 	$cidade = isset($_POST['cidade-cliente']) ? $_POST['cidade-cliente'] : false;
 	$telefone = isset($_POST['tel']) ? $_POST['tel'] : false;
 	$email = isset($_POST['email']) ? $_POST['email'] : false;
-	$sqlCl = mysqli_query($conexao, "INSERT INTO cliente(cpf, nome, sobrenome,status) 
-  	VALUES('$cpf', '$nome', '$sobrenome', 1)");
+	$sqlCl = mysqli_query($conexao, "INSERT INTO cliente(cpf, nome, sobrenome) 
+  	VALUES('$cpf', '$nome', '$sobrenome')");
   	$sqlEnd = mysqli_query($conexao, "INSERT INTO endereco(cidade, logradouro, numero, bairro, cep, cpf_cliente) 
   	VALUES('$cidade', '$logradouro', '$numero', '$bairro', '$cep', '$cpf')");
   	$sqlCont = mysqli_query($conexao, "INSERT INTO contato(telefone, email, cpf_cliente) 
