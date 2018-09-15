@@ -179,6 +179,19 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
     text-transform: uppercase;
 }
 
+.StatusInOrder{
+	color: black;
+    position: relative;
+    background: white;
+    text-transform: uppercase;
+}
+
+.StatusPedido{
+	position: relative;
+	top: 10px;
+	left: 10px;
+}
+
 .box .input-text {
 		margin: 3px 5px;
 		padding:8px 10px !important;
@@ -242,7 +255,7 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 		width:95px;
 		border: 1px double #286090;
 }
-.box .button-cancelar{
+.box .button-fechar{
 		margin:0 0 -5px 0;
 		padding:4px 7px;
 		background:green;
@@ -254,6 +267,19 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 		border: 1px double green;
 		float: right;
 }
+
+.box .button-limpar-comanda{
+    margin: 0 0 -5px 0;
+    padding: 4px 7px;
+    background: #770000;
+    border: 0px;
+    position: relative;
+    top: -2px;
+    width: 105px;
+    border: 1px double #770000;
+    float: right;
+}
+
 .box .button-somar-do-pedido{
 		width: 22px;
 		height: 22px;
@@ -392,6 +418,13 @@ border: 1px solid #222222;
 		float: left;
 		padding: 6px;
 }
+
+#TotalPag{
+	border: none; 
+	padding-left: 10px; 
+	margin-bottom: 10px;
+}
+
 .btn-novo-pedido{
 		background-color: #337ab7;
 		border: #337ab7;
@@ -434,12 +467,7 @@ border: 1px solid #222222;
 .modal-content{
 	position: absolute;
 }
-.tabela-listar{
-	width: 77%;
-	left: 300px;
-	position: relative;
-	top: 100px;
-}
+
 @media screen and (max-width: 765px){
 	body{
 		background-size: 310%;

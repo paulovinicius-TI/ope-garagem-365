@@ -12,57 +12,47 @@
 	echo "<th>Cidade</th>";
 	echo "<th>Telefone</th>";
 	echo "<th>Email</th>";
-	echo "<th>Ação</th>";
 	echo "</tr>";
-
-	$result_clientes = "SELECT * FROM cliente INNER JOIN endereco  ON cliente.cpf = endereco.cpf_cliente INNER JOIN contato ON cliente.cpf = contato.cpf_cliente WHERE cliente.status != 0";
-
-	$resultado_clientes = mysqli_query($conexao, $result_clientes);
-
-
- while ($registroCl = mysqli_fetch_assoc($resultado_clientes)){
-	echo "<tr>";
-		echo "<td>".$registroCl['cpf']; "</td>";
-		echo "<td>".$registroCl['nome']; "</td>";
-		echo "<td>".$registroCl['sobrenome']; "</td>";
-		echo "<td>".$registroCl['cep']; "</td>";
-		echo "<td>".$registroCl['logradouro']; "</td>";
-		echo "<td>".$registroCl['numero']; "</td>";
-		echo "<td>".$registroCl['bairro']; "</td>";
-		echo "<td>".$registroCl['cidade']; "</td>";
-		echo "<td>".$registroCl['telefone']; "</td>";
-		echo "<td>".$registroCl['email']; "</td>";
-		echo "<td hidden='true'>".$registroCl['status']; "</td>";
-		
-		echo "<td>";
+	$sqlCl = "SELECT * FROM cliente ORDER BY cpf";
+	$retornoCl = mysqli_query($conexao, $sqlCl) or die ('Erro');
+	$sqlE = "SELECT * FROM endereco WHERE id_fornec = 0 ORDER BY cpf_cliente";
+	$retornoE = mysqli_query($conexao, $sqlE) or die ('Erro');
+	$sqlCo = "SELECT * FROM contato WHERE id_fornec = 0 ORDER BY cpf_cliente";
+	$retornoCo = mysqli_query($conexao, $sqlCo) or die ('Erro');
 ?>
-		<button type='button' class='fas fa-pencil-alt' data-target='#alterarClienteModal' data-toggle='modal' 
-			data-whatevernome="<?php echo $registroCl['nome'];?>"
-			data-whateversobrenome="<?php echo $registroCl['sobrenome'];?>"
-			data-whatevercpf="<?php echo $registroCl['cpf'];?>"  
-			data-whatevercep="<?php echo $registroCl['cep'];?>"
-			data-whateverlogradouro="<?php echo $registroCl['logradouro'];?>"
-			data-whatevernumero="<?php echo $registroCl['numero'];?>"
-			data-whateverbairro="<?php echo $registroCl['bairro'];?>"
-			data-whatevercidade="<?php echo $registroCl['cidade'];?>"
-			data-whatevertelefone="<?php echo $registroCl['telefone'];?>"
-			data-whateveremail="<?php echo $registroCl['email'];?>"
-
-			></button>
-
-
-	
-		<button type='button' class='fas fa-trash-alt' data-target='#excluirClienteModal' data-toggle='modal' 
-		data-whatevercpf="<?php echo $registroCl['cpf'];?>"
-		data-whateverstatus="<?php echo $registroCl['status'];?>"
-
-
-		></button>			
-		</td>			
-									
-
 
 <?php
+while ($registroCl = mysqli_fetch_array($retornoCl) and $registroE = mysqli_fetch_array($retornoE) and $registroCo = mysqli_fetch_array($retornoCo)){
+	$nome = $registroCl['nome'];
+	$sobrenome = $registroCl['sobrenome'];
+	$cpf = $registroCl['cpf'];
+	$cep = $registroE['cep'];
+	$logradouro = $registroE['logradouro'];
+	$numero = $registroE['numero'];
+	$bairro = $registroE['bairro'];
+	$cidade = $registroE['cidade'];
+	$telefone = $registroCo['telefone'];
+	$email = $registroCo['email'];
+
+	echo"<tr>";
+	echo "<td>". $cpf ."</td>";
+	echo "<td>". $nome ."</td>";
+	echo "<td>". $sobrenome."</td>";
+	echo "<td>". $cep."</td>";
+	echo "<td>". $logradouro."</td>";
+	echo "<td>". $numero."</td>";
+	echo "<td>". $bairro."</td>";
+	echo "<td>". $cidade."</td>";
+	echo "<td>". $telefone."</td>";
+	echo "<td>". $email."</td>";
+	echo "<td><button><i class='fas fa-pencil-alt'></i>
+				</button>
+				<button><i class='fas fa-trash-alt'></i>
+				</button>
+				</td>";
+	echo "</tr>";
 }
+
 mysqli_close($conexao);
+echo "</table>";
 ?>
