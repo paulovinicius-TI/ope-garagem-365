@@ -14,7 +14,7 @@
   <body id="top" data-spy="scroll">
     
 <?php 
-  include "../model/formPedidos/formularios.php";
+  include "../model/formPedidos/formulario1.php";
   include "../model/formPedidos/formulario2.php";
   include "../model/formPedidos/formulario3.php";
 ?>
