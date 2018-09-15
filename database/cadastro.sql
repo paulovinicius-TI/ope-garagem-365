@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 15-Set-2018 às 20:53
+-- Generation Time: 15-Set-2018 às 22:16
 -- Versão do servidor: 10.1.35-MariaDB
 -- versão do PHP: 7.2.9
 
@@ -31,23 +31,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `cliente` (
   `cpf` varchar(14) NOT NULL,
   `nome` varchar(15) NOT NULL,
-  `sobrenome` varchar(15) NOT NULL,
-  `status` bit(1) NOT NULL
+  `sobrenome` varchar(15) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `cliente`
 --
 
-INSERT INTO `cliente` (`cpf`, `nome`, `sobrenome`, `status`) VALUES
-('111.111.111-11', 'cliente', 'cliente', b'0'),
-('222.222.222-22', 'cliente11114f', 'teste 23333', b'1'),
-('445.515.151-45', 'Matheus', 'Alves', b'1'),
-('515.151.515-15', 'Matheus ', 'testq', b'1'),
-('403.484.848-48', 'Djonga', 'Matheus', b'1'),
-('123.222.222-22', 'Masdasda', 'dasdas', b'1'),
-('312.312.312-31', 'Racionais', 'Brown', b'1'),
-('231.312.312-31', 'jaoo', 'neves', b'1');
+INSERT INTO `cliente` (`cpf`, `nome`, `sobrenome`) VALUES
+('111.111.111-11', 'cliente', 'teste'),
+('222.222.222-22', 'cliente 2', 'teste 2'),
+('333.333.333-33', 'cliente3', 'teste3');
 
 -- --------------------------------------------------------
 
@@ -68,24 +62,9 @@ CREATE TABLE `contato` (
 --
 
 INSERT INTO `contato` (`id`, `telefone`, `email`, `cpf_cliente`, `id_fornec`) VALUES
-(37, '(22)22222-2222', 'cliente2@2teste.com', '111.111.111-11', 0),
+(37, '(11)11111-1111', 'cliente@teste.com', '111.111.111-11', 0),
 (38, '(22)22222-2222', 'cliente@tes2.com', '222.222.222-22', 0),
-(39, '', '', '', 0),
-(40, '(31)23123-2311', 'teste@teste.comfd', '445.515.151-45', 0),
-(41, '(02)02020-2022', 'fsdnO@gmailsd.com', '515.151.515-15', 0),
-(42, '', '', '', 0),
-(43, '(11)11111-1111', 'stwesdf@fdxccx.com', '403.484.848-48', 0),
-(44, '', '', '', 0),
-(45, '', '', '', 0),
-(46, '', '', '', 0),
-(47, '', '', '', 0),
-(48, '', '', '', 0),
-(49, '', '', '5', 0),
-(50, '(11)11111-1111', 'stwesdf@fdxccx.com', '432.432.423-42', 0),
-(51, '(11)11111-1111', 'alvesmatheus103@gmail.com', '312.312.312-31', 0),
-(52, '(11)11111-1111', 'Masdasda@gmai.com', '123.222.222-22', 0),
-(53, '(11)11111-1111', '111111@gm.com', '015.512.262-62', 0),
-(54, '(11)11111-1111', '11asd21a@das.com', '231.312.312-31', 0);
+(39, '(33)33333-3333', 'cl@te3.com', '333.333.333-33', 0);
 
 -- --------------------------------------------------------
 
@@ -109,24 +88,9 @@ CREATE TABLE `endereco` (
 --
 
 INSERT INTO `endereco` (`id`, `cidade`, `logradouro`, `numero`, `bairro`, `cep`, `id_fornec`, `cpf_cliente`) VALUES
-(45, 'SÃ£o Paulo', 'Rua CaraÃ­bas', '200', 'Perdizes', '05020-000', 0, '111.111.111-11'),
+(45, 'SÃ£o Paulo', 'Rua Ãlvaro Pinto', '11', 'Jardim Maria Estela', '04181-010', 0, '111.111.111-11'),
 (46, 'SÃ£o Paulo', 'Rua Jeremias Junior', '2', 'Vila Nair', '04282-020', 0, '222.222.222-22'),
-(47, '', '', '', '', '', 0, ''),
-(48, 'testee', 'Rua Silva GuimarÃ£es', '20', 'Vila Ede', '02202-020', 0, '445.515.151-45'),
-(49, 'SÃ£o Paulo', 'Rua CaraÃ­bas', '200', 'Perdizes', '05020-000', 0, '515.151.515-15'),
-(50, '', '', '', '', '', 0, ''),
-(51, 'SÃ£o Paulo', 'Rua CaraÃ­bas', '200', 'Perdizes', '05020-000', 0, '403.484.848-48'),
-(52, '', '', '', '', '', 0, ''),
-(53, '', '', '', '', '', 0, ''),
-(54, '', '', '', '', '', 0, ''),
-(55, '', '', '', '', '', 0, ''),
-(56, '', '', '', '', '', 0, ''),
-(57, '', '', '', '', '', 0, '5'),
-(58, '', 'Rua CaraÃ­bas', '200', 'Perdizes', '05020-000', 0, '432.432.423-42'),
-(59, 'Cajamar', 'Avenida das Palmeiras', '200', 'Portais (Polvilho)', '07790-890', 0, '312.312.312-31'),
-(60, 'Cajamar', 'Rua dos Eucaliptos', '222', 'Portais (Polvilho)', '07791-025', 0, '123.222.222-22'),
-(61, '', '', '20', '', '05020-000', 0, '015.512.262-62'),
-(62, '', '', '5000', '', '00000-000', 0, '231.312.312-31');
+(47, 'SÃ£o Paulo', 'Rua EfigÃªnio de Salles', '33', 'Jardim Jabaquara', '04383-030', 0, '333.333.333-33');
 
 -- --------------------------------------------------------
 
@@ -182,7 +146,7 @@ CREATE TABLE `pagamento` (
 
 CREATE TABLE `pedido` (
   `numero` int(11) NOT NULL,
-  `status` tinyint(4) NOT NULL,
+  `status` varchar(8) NOT NULL,
   `descricao` varchar(40) NOT NULL,
   `data_pedido` datetime NOT NULL,
   `data_pagamento` datetime NOT NULL,
@@ -211,7 +175,8 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`codigo`, `nome`, `preco_unid`, `qtd`, `descricao`) VALUES
-(123, 'Coca-cola', '10', 20, 'simples refrigerante');
+(123, 'Coca-cola', '10', 20, 'simples refrigerante'),
+(456, 'Pepsi', '9', 20, 'outro simples refri');
 
 --
 -- Indexes for dumped tables
@@ -281,13 +246,13 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT for table `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `endereco`
 --
 ALTER TABLE `endereco`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `fornecedor`
@@ -299,7 +264,7 @@ ALTER TABLE `fornecedor`
 -- AUTO_INCREMENT for table `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `numero` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `numero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
