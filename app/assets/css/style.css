@@ -268,12 +268,13 @@ form,input,select,textarea{margin:0; padding:0px; color:#ffffff;}
 
 /*abrir pedido*/
 .box-pedido{
-		width: 324px;
-		background: #222222;
-		color: #bbbbbb;
-		top: 0;
-		float: left;
-		margin-left: 400px;
+	    width: 290px;
+	    background: #222222;
+	    color: #bbbbbb;
+	    top: 0;
+	    float: left;
+	    left: 300px;
+	    margin: 30px;
 }
 
 
@@ -389,6 +390,7 @@ border: 1px solid #222222;
 
 .valor-total{
 		float: left;
+		padding: 6px;
 }
 .btn-novo-pedido{
 		background-color: #337ab7;
@@ -432,7 +434,12 @@ border: 1px solid #222222;
 .modal-content{
 	position: absolute;
 }
-
+.tabela-listar{
+	width: 77%;
+	left: 300px;
+	position: relative;
+	top: 100px;
+}
 @media screen and (max-width: 765px){
 	body{
 		background-size: 310%;
